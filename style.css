@@ -215,32 +215,6 @@ body {
     background: #6d28d9;
 }
 
-/* Блоки та заголовки */
-.section-block-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.section-block-header h2 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.section-block-header a {
-    color: #a855f7;
-    font-size: 0.85rem;
-    text-decoration: none;
-}
-
-.c-orange {
-    color: #f97316;
-}
-
 /* Футер */
 footer {
     background-color: #090d16;
