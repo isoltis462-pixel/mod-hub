@@ -1,38 +1,43 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
 
 body {
-    background-color: #07090e;
-    color: #e2e8f0;
+    background-color: #05080f;
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Шапка */
+/* Навігація */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0d111a;
-    padding: 0.8rem 2rem;
+    height: 70px;
+    background-color: #090d16;
     border-bottom: 1px solid #161f30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .logo {
-    color: #a855f7;
+    font-size: 1.2rem;
     font-weight: 800;
-    font-size: 1.25rem;
+    color: #fff;
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.logo i {
+    color: #a855f7;
 }
 
 .nav-links {
@@ -41,15 +46,16 @@ body {
 }
 
 .nav-links a {
-    color: #8b9bb4;
     text-decoration: none;
+    color: #94a3b8;
+    font-size: 0.9rem;
     font-weight: 500;
-    font-size: 0.95rem;
     transition: color 0.2s;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: #fff;
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
 }
 
 .nav-right {
@@ -59,331 +65,192 @@ body {
 }
 
 .search-box {
-    background: #131b2c;
-    border: 1px solid #1e2c44;
+    background: #0d111a;
+    border: 1px solid #161f30;
     border-radius: 8px;
-    padding: 0.5rem 1rem;
+    padding: 6px 12px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     width: 240px;
-    color: #64748b;
 }
 
 .search-box input {
     background: transparent;
     border: none;
     color: #fff;
-    outline: none;
     font-size: 0.85rem;
+    outline: none;
     width: 100%;
 }
 
-.icon-btn {
-    background: #131b2c;
-    border: 1px solid #1e2c44;
-    color: #cbd5e1;
-    padding: 0.55rem 0.65rem;
+.search-box i {
+    color: #64748b;
+}
+
+.icon-btn, .login-btn {
+    background: #0d111a;
+    border: 1px solid #161f30;
+    color: #fff;
+    padding: 6px 12px;
     border-radius: 8px;
     cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 .login-btn {
     background: #7c3aed;
-    color: #fff;
     border: none;
-    padding: 0.55rem 1.2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background 0.2s;
 }
 
 .login-btn:hover {
     background: #6d28d9;
 }
 
-/* Основна сітка сайту */
+/* Основний контент та сайдбар */
 .main-container {
-    display: grid;
-    grid-template-columns: 220px 1fr 280px;
-    gap: 1.2rem;
-    padding: 1.2rem 2rem;
-    max-width: 1550px;
-    margin: 0 auto;
+    display: flex;
     flex: 1;
+    max-width: 1400px;
     width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    gap: 1.5rem;
 }
 
-/* Лівий сайдбар */
 .left-sidebar {
-    background: #0d111a;
-    border: 1px solid #161f30;
-    border-radius: 12px;
-    padding: 1rem;
-    height: fit-content;
+    width: 240px;
+    flex-shrink: 0;
 }
 
 .sidebar-section-title {
-    font-size: 0.8rem;
-    color: #64748b;
-    text-transform: uppercase;
+    font-size: 0.75rem;
     font-weight: 700;
-    margin-bottom: 0.6rem;
-    letter-spacing: 0.5px;
+    color: #64748b;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.sidebar-section-title:first-child {
+    margin-top: 0;
 }
 
 .sidebar-list {
     list-style: none;
-    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .sidebar-list li {
-    padding: 0.5rem 0.8rem;
-    border-radius: 6px;
-    color: #8b9bb4;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 500;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 0.88rem;
-    transition: all 0.2s;
+    transition: background 0.2s, color 0.2s;
 }
 
-.sidebar-list li:hover, .sidebar-list li.active {
+.sidebar-list li:hover {
+    background: #0d111a;
+    color: #fff;
+}
+
+.sidebar-list li.active {
     background: #7c3aed;
     color: #fff;
 }
 
-/* Центр контенту */
 .content-area {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem;
 }
 
+/* Банер */
 .hero-banner {
-    background: linear-gradient(90deg, #181235 0%, #0d111a 100%), url('https://images.unsplash.com/photo-1542282088-72c9c27ed0cd') center/cover;
-    background-blend-mode: overlay;
-    border: 1px solid #2a225a;
-    border-radius: 14px;
-    padding: 2.2rem;
+    background: linear-gradient(90deg, #1e1b4b 0%, #0d111a 100%);
+    border: 1px solid #161f30;
+    border-radius: 12px;
+    padding: 2.5rem;
     position: relative;
     overflow: hidden;
 }
 
 .hero-content h1 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-weight: 800;
-    color: #fff;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.75rem;
     line-height: 1.2;
 }
 
 .hero-content p {
-    color: #8b9bb4;
+    color: #94a3b8;
     font-size: 0.9rem;
-    max-width: 440px;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
 }
 
 .hero-btn {
     background: #7c3aed;
     color: #fff;
     border: none;
-    padding: 0.65rem 1.2rem;
+    padding: 10px 20px;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 0.88rem;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
 }
 
-/* Блоки із карточками */
+.hero-btn:hover {
+    background: #6d28d9;
+}
+
+/* Блоки та заголовки */
 .section-block-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .section-block-header h2 {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    font-weight: 700;
     display: flex;
     align-items: center;
     gap: 8px;
-    font-weight: 700;
 }
 
 .section-block-header a {
-    color: #7c3aed;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.cards-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.9rem;
-}
-
-.mod-card {
-    background: #0d111a;
-    border: 1px solid #161f30;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s, border-color 0.2s;
-}
-
-.mod-card:hover {
-    transform: translateY(-3px);
-    border-color: #7c3aed;
-}
-
-.mod-card img {
-    width: 100%;
-    height: 110px;
-    object-fit: cover;
-}
-
-.mod-card-body {
-    padding: 0.8rem;
-}
-
-.mod-card-body h4 {
-    font-size: 0.85rem;
-    margin-bottom: 0.4rem;
-    color: #fff;
-    font-weight: 600;
-}
-
-.tag {
-    background: #161f30;
     color: #a855f7;
-    font-size: 0.7rem;
-    padding: 2px 6px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 0.4rem;
-    font-weight: 500;
-}
-
-.card-downloads {
-    font-size: 0.75rem;
-    color: #64748b;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-/* Правий сайдбар */
-.right-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.top-box, .support-box {
-    background: #0d111a;
-    border: 1px solid #161f30;
-    border-radius: 12px;
-    padding: 1rem;
-}
-
-.top-box h3 {
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 0.8rem;
-}
-
-.top-items-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-}
-
-.top-items-list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.82rem;
-}
-
-.top-rank {
-    font-weight: 700;
-    color: #64748b;
-    width: 12px;
-    text-align: center;
-}
-
-.top-items-list img {
-    width: 38px;
-    height: 38px;
-    border-radius: 6px;
-    object-fit: cover;
-}
-
-.top-item-info b {
-    color: #fff;
-    font-size: 0.8rem;
-    display: block;
-    margin-bottom: 2px;
-}
-
-.top-item-info small {
-    color: #64748b;
-    font-size: 0.7rem;
-}
-
-.support-box {
-    background: linear-gradient(135deg, #181235 0%, #0d111a 100%);
-    border-color: #2a225a;
-    text-align: center;
-    padding: 1.2rem;
-}
-
-.support-box h4 {
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
-    color: #fff;
-}
-
-.support-box p {
-    font-size: 0.78rem;
-    color: #8b9bb4;
-    margin-bottom: 0.8rem;
-}
-
-.support-btn {
-    background: #7c3aed;
-    color: #fff;
-    border: none;
-    width: 100%;
-    padding: 0.6rem;
-    border-radius: 8px;
-    font-weight: 600;
     font-size: 0.85rem;
-    cursor: pointer;
+    text-decoration: none;
+}
+
+.c-orange {
+    color: #f97316;
 }
 
 /* Футер */
 footer {
-    background: #0d111a;
+    background-color: #090d16;
     border-top: 1px solid #161f30;
-    padding: 1.2rem 2rem;
+    padding: 1.5rem 2rem;
     margin-top: auto;
 }
 
 .footer-inner {
-    max-width: 1550px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -392,9 +259,9 @@ footer {
 
 .footer-socials {
     display: flex;
-    gap: 1.2rem;
-    color: #8b9bb4;
-    font-size: 1.1rem;
+    gap: 1.5rem;
+    color: #94a3b8;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
@@ -402,8 +269,3 @@ footer {
     color: #64748b;
     font-size: 0.85rem;
 }
-
-/* Утиліти кольорів */
-.c-orange { color: #f97316; }
-.c-purple { color: #a855f7; }
-.c-yellow { color: #eab308; }
