@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід / Реєстрація — TOP MODS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #090d16 url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+        }
+        .auth-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(9, 13, 22, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1;
+        }
+        .auth-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 440px;
+            background: #0d111aff;
+            border: 1px solid #1f293d;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .auth-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .auth-logo i {
+            font-size: 2.5rem;
+            color: #a855f7;
+            margin-bottom: 0.5rem;
+        }
+        .auth-logo h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+        .auth-logo p {
+            color: #94a3b8;
+            font-size: 0.8rem;
+            margin-top: 4px;
+        }
+        .auth-tabs {
+            display: flex;
+            background: #131b2e;
+            border-radius: 10px;
+            padding: 4px;
+            margin-bottom: 1.5rem;
+        }
+        .auth-tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #94a3b8;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.2s;
+            border: none;
+            background: transparent;
+        }
+        .auth-tab.active {
+            background: #7c3aed;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        .form-label {
+            display: block;
+            font-size: 0.8rem;
+            color: #cbd5e1;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .input-wrapper i {
+            position: absolute;
+            left: 14px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        .input-wrapper input {
+            width: 100%;
+            background: #131b2e;
+            border: 1px solid #1f293d;
+            border-radius: 8px;
+            padding: 11px 14px 11px 40px;
+            color: #fff;
+            font-size: 0.9rem;
+            outline: none;
+            transition: 0.2s;
+        }
+        .input-wrapper input:focus {
+            border-color: #a855f7;
+            box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+        }
+        .auth-btn {
+            width: 100%;
+            background: linear-gradient(90deg, #7c3aed, #6366f1);
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .auth-btn:hover {
+            opacity: 0.9;
+        }
+        .social-login {
+            display: flex;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        .social-btn {
+            flex: 1;
+            background: #131b2e;
+            border: 1px solid #1f293d;
+            border-radius: 8px;
+            padding: 10px;
+            color: #fff;
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        .social-btn:hover {
+            background: #1f293d;
+        }
+        .back-home {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .back-home a {
+            color: #94a3b8;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+        .back-home a:hover {
+            color: #a855f7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-overlay"></div>
+
+    <div class="auth-container">
+        <div class="auth-logo">
+            <i class="fa-solid fa-crown"></i>
+            <h2>TOP MODS</h2>
+            <p>Моди, які роблять гру кращою</p>
+        </div>
+
+        <div class="auth-tabs">
+            <button class="auth-tab active" onclick="switchTab('login')">Вхід</button>
+            <button class="auth-tab" onclick="switchTab('register')">Реєстрація</button>
+        </div>
+
+        <form action="profile.html" method="GET">
+            <div class="form-group">
+                <label class="form-label">Email або нікнейм</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" placeholder="Введіть ваш email або нікнейм" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Пароль</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Введіть пароль" required>
+                </div>
+            </div>
+
+            <button type="submit" class="auth-btn">Увійти <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+
+        <div style="text-align: center; margin: 1.25rem 0; color: #64748b; font-size: 0.8rem; position: relative;">
+            <span style="background: #0d111a; padding: 0 10px; position: relative; z-index: 1;">або через соцмережі</span>
+            <hr style="border: none; border-top: 1px solid #1f293d; position: absolute; top: 50%; left: 0; width: 100%; margin: 0; z-index: 0;">
+        </div>
+
+        <div class="social-login">
+            <a href="profile.html" class="social-btn"><i class="fa-brands fa-google" style="color: #ea4335;"></i> Google</a>
+            <a href="profile.html" class="social-btn"><i class="fa-brands fa-discord" style="color: #5865F2;"></i> Discord</a>
+            <a href="profile.html" class="social-btn"><i class="fa-brands fa-steam" style="color: #66c0f4;"></i> Steam</a>
+        </div>
+
+        <div class="back-home">
+            <a href="index.html"><i class="fa-solid fa-house"></i> На головну</a>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tab) {
+            const tabs = document.querySelectorAll('.auth-tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
