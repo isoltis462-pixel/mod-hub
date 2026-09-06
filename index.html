@@ -10,7 +10,6 @@
 </head>
 <body>
 
-    <!-- Навігація -->
     <header class="navbar">
         <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
         <nav class="nav-links">
@@ -25,67 +24,62 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Пошук модів або ігор...">
             </div>
-            <button class="icon-btn"><i class="fa-regular fa-user"></i></button>
-            <button class="login-btn">Увійти</button>
+            <button class="icon-btn" onclick="alert('Кабінет користувача')"><i class="fa-regular fa-user"></i></button>
+            <button class="login-btn" onclick="alert('Сторінка входу')">Увійти</button>
         </div>
     </header>
 
-    <!-- Основний контейнер -->
     <div class="main-container" style="display: flex; gap: 1.5rem; max-width: 1400px; width: 100%; margin: 0 auto; padding: 1.5rem;">
         
-        <!-- Лівий сайдбар -->
         <aside class="left-sidebar" style="width: 220px; flex-shrink: 0;">
             <div class="sidebar-section-title">ІГРИ</div>
             <ul class="sidebar-list">
-                <li class="active"><i class="fa-solid fa-gamepad"></i> Усі ігри</li>
-                <li><i class="fa-solid fa-gamepad"></i> GTA V</li>
-                <li><i class="fa-solid fa-truck"></i> ETS 2</li>
-                <li><i class="fa-solid fa-car-burst"></i> BeamNG.drive</li>
+                <li><a href="games.html" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-gamepad"></i> Усі ігри</a></li>
+                <li><a href="games.html?game=gta5" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-gamepad"></i> GTA V</a></li>
+                <li><a href="games.html?game=ets2" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-truck"></i> ETS 2</a></li>
+                <li><a href="games.html?game=beamng" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-car-burst"></i> BeamNG.drive</a></li>
             </ul>
 
             <div class="sidebar-section-title">КАТЕГОРІЇ</div>
             <ul class="sidebar-list">
-                <li><i class="fa-solid fa-car"></i> Транспорт</li>
-                <li><i class="fa-solid fa-palette"></i> Графіка</li>
-                <li><i class="fa-solid fa-map"></i> Карти</li>
-                <li><i class="fa-solid fa-code"></i> Скрипти</li>
+                <li><a href="categories.html?cat=transport" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-car"></i> Транспорт</a></li>
+                <li><a href="categories.html?cat=graphics" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-palette"></i> Графіка</a></li>
+                <li><a href="categories.html?cat=maps" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-map"></i> Карти</a></li>
+                <li><a href="categories.html?cat=scripts" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-code"></i> Скрипти</a></li>
             </ul>
         </aside>
 
-        <!-- Центральний контент -->
         <main class="content-area" style="flex: 1; display: flex; flex-direction: column; gap: 1.5rem;">
             
-            <!-- Великий банер -->
-            <div style="background: linear-gradient(90deg, #2e1065 0%, #0d111a 100%); border: 1px solid #161f30; border-radius: 12px; padding: 2.5rem; position: relative; overflow: hidden;">
+            <div style="background: linear-gradient(90deg, #2e1065 0%, #0d111a 100%); border: 1px solid #161f30; border-radius: 12px; padding: 2.5rem;">
                 <div style="max-width: 550px;">
                     <div style="font-size: 0.8rem; color: #a855f7; margin-bottom: 6px; font-weight: 700;"><i class="fa-solid fa-star"></i> ПОРТАЛ МОДІВ №1</div>
                     <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem; line-height: 1.2;">ЗБІРНИК НАЙКРАЩИХ МОДІВ ДЛЯ ІГОР</h1>
                     <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.5rem;">Знаходь, завантажуй та оновлюй модифікації у пару кліків. Швидко, безпечно та без зайвої реклами.</p>
-                    <a href="games.html" style="background: #7c3aed; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem;">
+                    <a href="games.html" style="background: #7c3aed; color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem;">
                         Перейти до ігор <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Популярні категорії -->
             <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; padding: 1.5rem;">
                 <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; color: #fff;">Популярні напрямки</h2>
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
-                    <div style="background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1rem;">
+                    <a href="categories.html" style="background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1rem; text-decoration: none; display: block; transition: 0.2s;">
                         <i class="fa-solid fa-car" style="color: #a855f7; font-size: 1.2rem; margin-bottom: 8px;"></i>
                         <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 4px;">Транспорт</h4>
                         <p style="color: #94a3b8; font-size: 0.75rem;">Найновіші спорткари та авто.</p>
-                    </div>
-                    <div style="background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1rem;">
+                    </a>
+                    <a href="categories.html" style="background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1rem; text-decoration: none; display: block;">
                         <i class="fa-solid fa-palette" style="color: #a855f7; font-size: 1.2rem; margin-bottom: 8px;"></i>
                         <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 4px;">Графіка</h4>
                         <p style="color: #94a3b8; font-size: 0.75rem;">Решейди та покращення візуалу.</p>
-                    </div>
-                    <div style="background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1rem;">
+                    </a>
+                    <a href="categories.html" style="background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1rem; text-decoration: none; display: block;">
                         <i class="fa-solid fa-map" style="color: #a855f7; font-size: 1.2rem; margin-bottom: 8px;"></i>
                         <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 4px;">Карти</h4>
                         <p style="color: #94a3b8; font-size: 0.75rem;">Розширення світу та треки.</p>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -93,18 +87,14 @@
 
     </div>
 
-    <!-- Футер -->
     <footer>
         <div class="footer-inner">
             <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
             <div class="footer-socials">
-                <i class="fa-brands fa-discord"></i>
-                <i class="fa-brands fa-telegram"></i>
-                <i class="fa-brands fa-youtube"></i>
+                <a href="https://t.me/Privud_privud" target="_blank" style="color:inherit;"><i class="fa-brands fa-telegram"></i></a>
             </div>
             <div class="footer-slogan">Більше модів — більше задоволення!</div>
         </div>
     </footer>
-
 </body>
 </html>
