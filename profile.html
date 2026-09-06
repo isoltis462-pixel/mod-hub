@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профіль — Солтис Вадим — TOP MODS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Навігація -->
+    <header class="navbar">
+        <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
+        <nav class="nav-links">
+            <a href="index.html">Головна</a>
+            <a href="games.html">Ігри</a>
+            <a href="categories.html">Категорії</a>
+            <a href="top.html">Топ</a>
+            <a href="support.html">Підтримка</a>
+        </nav>
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Пошук модів або ігор...">
+            </div>
+            <a href="profile.html" class="icon-btn" style="color:#a855f7; border-color:#a855f7;"><i class="fa-regular fa-user"></i></a>
+            <a href="auth.html" class="login-btn" style="text-decoration:none;">Вийти</a>
+        </div>
+    </header>
+
+    <!-- Основний контейнер (Оптимізовано для ПК: велика широка сітка) -->
+    <div class="main-container" style="display: flex; gap: 1.5rem; max-width: 1400px; width: 100%; margin: 0 auto; padding: 1.5rem;">
+        
+        <!-- Лівий сайдбар -->
+        <aside class="left-sidebar" style="width: 240px; flex-shrink: 0;">
+            <div class="sidebar-section-title">ІГРИ</div>
+            <ul class="sidebar-list">
+                <li><a href="games.html" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-gamepad"></i> Всі ігри</a></li>
+                <li><a href="games.html" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-gamepad"></i> GTA V</a></li>
+                <li><a href="games.html" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-truck"></i> ETS 2</a></li>
+                <li><a href="games.html" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-car-burst"></i> BeamNG.drive</a></li>
+                <li><a href="games.html" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-cube"></i> Minecraft <span style="background:#7c3aed; color:#fff; font-size:9px; padding:2px 6px; border-radius:4px; margin-left:auto;">Скоро</span></a></li>
+            </ul>
+
+            <div class="sidebar-section-title">КАТЕГОРІЇ</div>
+            <ul class="sidebar-list">
+                <li><a href="categories.html" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-car"></i> Транспорт</a></li>
+                <li><a href="categories.html" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-palette"></i> Графіка</a></li>
+                <li><a href="categories.html" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-map"></i> Карти</a></li>
+                <li><a href="categories.html" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-code"></i> Скрипти</a></li>
+            </ul>
+
+            <div class="sidebar-section-title">АКАУНТ</div>
+            <ul class="sidebar-list">
+                <li class="active"><a href="profile.html" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-user"></i> Профіль</a></li>
+                <li><a href="#" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-download"></i> Мої завантаження</a></li>
+                <li><a href="#" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-heart"></i> Улюблене</a></li>
+                <li><a href="#" style="color:inherit; text-decoration:none; display:flex; align-items:center; gap:10px; width:100%;"><i class="fa-solid fa-gear"></i> Налаштування</a></li>
+            </ul>
+        </aside>
+
+        <!-- Центральна область профілю (ПК-версія) -->
+        <main class="content-area" style="flex: 1; display: flex; flex-direction: column; gap: 1.5rem;">
+            
+            <!-- Шапка профілю з банером та статистикою -->
+            <div style="background: linear-gradient(180deg, #131b2e 0%, #0d111a 100%); border: 1px solid #1f293d; border-radius: 12px; overflow: hidden; position: relative;">
+                <!-- Банер -->
+                <div style="height: 180px; background: linear-gradient(90deg, #2e1065, #111827); position: relative; padding: 1.5rem; display: flex; justify-content: flex-end; align-items: flex-start;">
+                    <span style="background: rgba(0,0,0,0.5); backdrop-filter: blur(5px); color: #fff; font-size: 0.85rem; padding: 6px 14px; border-radius: 20px; font-weight: 600;"><i class="fa-solid fa-sparkles" style="color: #a855f7;"></i> Ласкаво просимо назад!</span>
+                </div>
+
+                <!-- Інформація під банером -->
+                <div style="padding: 0 2rem 1.5rem 2rem; position: relative; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+                    <div style="display: flex; align-items: flex-end; gap: 20px; margin-top: -60px;">
+                        <!-- Аватарка з неоновим колом -->
+                        <div style="width: 120px; height: 120px; border-radius: 50%; background: #0d111a; border: 4px solid #7c3aed; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 0 20px rgba(124,58,237,0.5);">
+                            <i class="fa-solid fa-crown" style="font-size: 3rem; color: #a855f7;"></i>
+                        </div>
+                        <div style="margin-bottom: 5px;">
+                            <h1 style="font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 2px;">Солтис Вадим</h1>
+                            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Користувач • З нами з 12.03.2025</p>
+                        </div>
+                    </div>
+
+                    <!-- Статистика плашки -->
+                    <div style="display: flex; gap: 10px;">
+                        <div style="background: #131b2e; border: 1px solid #1f293d; padding: 10px 18px; border-radius: 8px; text-align: center;">
+                            <i class="fa-solid fa-download" style="color: #a855f7; font-size: 0.9rem; margin-bottom: 2px;"></i>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">12</div>
+                            <div style="font-size: 0.7rem; color: #94a3b8;">Завантажень</div>
+                        </div>
+                        <div style="background: #131b2e; border: 1px solid #1f293d; padding: 10px 18px; border-radius: 8px; text-align: center;">
+                            <i class="fa-solid fa-heart" style="color: #ef4444; font-size: 0.9rem; margin-bottom: 2px;"></i>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">8</div>
+                            <div style="font-size: 0.7rem; color: #94a3b8;">Улюблене</div>
+                        </div>
+                        <div style="background: #131b2e; border: 1px solid #1f293d; padding: 10px 18px; border-radius: 8px; text-align: center;">
+                            <i class="fa-solid fa-comment" style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 2px;"></i>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">5</div>
+                            <div style="font-size: 0.7rem; color: #94a3b8;">Коментарі</div>
+                        </div>
+                        <div style="background: #131b2e; border: 1px solid #1f293d; padding: 10px 18px; border-radius: 8px; text-align: center;">
+                            <i class="fa-solid fa-star" style="color: #eab308; font-size: 0.9rem; margin-bottom: 2px;"></i>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">324</div>
+                            <div style="font-size: 0.7rem; color: #94a3b8;">Репутація</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Навігаційні вкладки профілю -->
+                <div style="display: flex; border-top: 1px solid #1f293d; padding: 0 2rem; gap: 25px; background: #0d111a;">
+                    <a href="#" style="padding: 14px 0; color: #a855f7; font-weight: 600; font-size: 0.9rem; text-decoration: none; border-bottom: 2px solid #a855f7;">Профіль</a>
+                    <a href="#" style="padding: 14px 0; color: #94a3b8; font-weight: 500; font-size: 0.9rem; text-decoration: none;">Мої завантаження</a>
+                    <a href="#" style="padding: 14px 0; color: #94a3b8; font-weight: 500; font-size: 0.9rem; text-decoration: none;">Улюблене</a>
+                    <a href="#" style="padding: 14px 0; color: #94a3b8; font-weight: 500; font-size: 0.9rem; text-decoration: none;">Коментарі</a>
+                    <a href="#" style="padding: 14px 0; color: #94a3b8; font-weight: 500; font-size: 0.9rem; text-decoration: none;">Налаштування</a>
+                </div>
+            </div>
+
+            <!-- Двоколоночна сітка контенту профілю -->
+            <div style="display: grid; grid-template-columns: 1fr 340px; gap: 1.5rem;">
+                
+                <!-- Ліва колонка (Про мене + Мої ігри + Дії) -->
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    
+                    <!-- Про мене -->
+                    <div style="background: #0d111a; border: 1px solid #1f293d; border-radius: 12px; padding: 1.5rem;">
+                        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fa-solid fa-pen-nib" style="color: #a855f7;"></i> Про мене
+                        </h3>
+                        <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px;">
+                            Привіт! Я люблю моди, особливо для GTA V та ETS 2. Завжди радий новим знайомствам і цікавим проєктам!
+                        </p>
+                        <div style="display: flex; gap: 10px;">
+                            <span style="background: #131b2e; border: 1px solid #1f293d; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #a855f7;"><i class="fa-solid fa-gamepad"></i> GTA V</span>
+                            <span style="background: #131b2e; border: 1px solid #1f293d; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #ef4444;"><i class="fa-solid fa-heart"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Мої ігри (ПК ексклюзив) -->
+                    <div style="background: #0d111a; border: 1px solid #1f293d; border-radius: 12px; padding: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <h3 style="font-size: 1rem; color: #fff; margin: 0;"><i class="fa-solid fa-gamepad" style="color: #a855f7;"></i> Мої ігри</h3>
+                            <span style="color: #a855f7; font-size: 0.8rem; font-weight: 600; cursor: pointer;">+ Додати гру</span>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+                            <div style="background: #131b2e; border: 1px solid #1f293d; border-radius: 8px; padding: 8px; text-align: center;">
+                                <div style="height: 60px; background: #1f293d; border-radius: 6px; margin-bottom: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #a855f7;"><i class="fa-solid fa-car"></i></div>
+                                <div style="font-size: 0.75rem; color: #fff; font-weight: 600;">GTA V</div>
+                            </div>
+                            <div style="background: #131b2e; border: 1px solid #1f293d; border-radius: 8px; padding: 8px; text-align: center;">
+                                <div style="height: 60px; background: #1f293d; border-radius: 6px; margin-bottom: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #a855f7;"><i class="fa-solid fa-truck"></i></div>
+                                <div style="font-size: 0.75rem; color: #fff; font-weight: 600;">ETS 2</div>
+                            </div>
+                            <div style="background: #131b2e; border: 1px solid #1f293d; border-radius: 8px; padding: 8px; text-align: center;">
+                                <div style="height: 60px; background: #1f293d; border-radius: 6px; margin-bottom: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #a855f7;"><i class="fa-solid fa-car-burst"></i></div>
+                                <div style="font-size: 0.75rem; color: #fff; font-weight: 600;">BeamNG</div>
+                            </div>
+                            <div style="background: #131b2e; border: 1px solid #1f293d; border-radius: 8px; padding: 8px; text-align: center;">
+                                <div style="height: 60px; background: #1f293d; border-radius: 6px; margin-bottom: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #a855f7;"><i class="fa-solid fa-cube"></i></div>
+                                <div style="font-size: 0.75rem; color: #fff; font-weight: 600;">Minecraft</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Останні дії -->
+                    <div style="background: #0d111a; border: 1px solid #1f293d; border-radius: 12px; padding: 1.5rem;">
+                        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 1rem;"><i class="fa-solid fa-clock-rotate-left" style="color: #a855f7;"></i> Останні дії</h3>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; background: #131b2e; padding: 10px 14px; border-radius: 8px;">
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem;">
+                                    <i class="fa-solid fa-download" style="color: #a855f7;"></i>
+                                    <span>Завантажив мод <b>«Realistic Car Pack»</b> для GTA V</span>
+                                </div>
+                                <span style="font-size: 0.75rem; color: #64748b;">2 години тому</span>
+                            </div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; background: #131b2e; padding: 10px 14px; border-radius: 8px;">
+                                <div style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem;">
+                                    <i class="fa-solid fa-heart" style="color: #ef4444;"></i>
+                                    <span>Додав мод у улюблене <b>«Better Minecraft»</b></span>
+                                </div>
+                                <span style="font-size: 0.75rem; color: #64748b;">5 годин тому</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Права колонка (Рівень профілю + Досягнення) -->
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    
+                    <!-- Рівень профілю -->
+                    <div style="background: #0d111a; border: 1px solid #1f293d; border-radius: 12px; padding: 1.5rem;">
+                        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fa-solid fa-crown" style="color: #a855f7;"></i> Рівень профілю
+                        </h3>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <span style="font-weight: 700; color: #a855f7; font-size: 0.9rem;">Новачок</span>
+                            <span style="font-size: 0.75rem; color: #94a3b8;">324 / 1000 XP</span>
+                        </div>
+                        <div style="width: 100%; height: 8px; background: #131b2e; border-radius: 4px; overflow: hidden; margin-bottom: 12px;">
+                            <div style="width: 32%; height: 100%; background: linear-gradient(90deg, #7c3aed, #a855f7); border-radius: 4px;"></div>
+                        </div>
+                        <p style="font-size: 0.75rem; color: #64748b; margin: 0;">Залишилося 676 XP до наступного рівня.</p>
+                    </div>
+
+                    <!-- Досягнення -->
+                    <div style="background: #0d111a; border: 1px solid #1f293d; border-radius: 12px; padding: 1.5rem;">
+                        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 1rem;"><i class="fa-solid fa-trophy" style="color: #eab308;"></i> Досягнення</h3>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                            <div style="background: #131b2e; border: 1px solid #1f293d; border-radius: 8px; padding: 12px; text-align: center;">
+                                <i class="fa-solid fa-medal" style="font-size: 1.4rem; color: #a855f7; margin-bottom: 6px;"></i>
+                                <div style="font-size: 0.8rem; font-weight: 700; color: #fff;">Перший мод</div>
+                                <div style="font-size: 0.7rem; color: #a855f7;">+50 XP</div>
+                            </div>
+                            <div style="background: #131b2e; border: 1px solid #1f293d; border-radius: 8px; padding: 12px; text-align: center;">
+                                <i class="fa-solid fa-fire" style="font-size: 1.4rem; color: #ef4444; margin-bottom: 6px;"></i>
+                                <div style="font-size: 0.8rem; font-weight: 700; color: #fff;">Активний</div>
+                                <div style="font-size: 0.7rem; color: #a855f7;">+100 XP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-inner">
+            <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
+            <div class="footer-socials"><a href="https://t.me/Privud_privud" target="_blank" style="color:inherit;"><i class="fa-brands fa-telegram"></i></a></div>
+            <div class="footer-slogan">Більше модів — більше задоволення!</div>
+        </div>
+    </footer>
+
+</body>
+</html>
