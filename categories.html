@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header class="navbar">
         <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
         <nav class="nav-links">
@@ -28,19 +29,65 @@
         </div>
     </header>
 
-    <div class="main-container">
-        <aside class="left-sidebar">
+    <div class="main-container" style="display: flex; gap: 1.5rem; max-width: 1400px; width: 100%; margin: 0 auto; padding: 1.5rem;">
+        
+        <aside class="left-sidebar" style="width: 220px; flex-shrink: 0;">
+            <div class="sidebar-section-title">ІГРИ</div>
+            <ul class="sidebar-list">
+                <li><i class="fa-solid fa-gamepad"></i> Усі ігри</li>
+                <li><i class="fa-solid fa-gamepad"></i> GTA V</li>
+                <li><i class="fa-solid fa-truck"></i> ETS 2</li>
+                <li><i class="fa-solid fa-car-burst"></i> BeamNG.drive</li>
+            </ul>
+
             <div class="sidebar-section-title">КАТЕГОРІЇ</div>
             <ul class="sidebar-list">
                 <li class="active"><i class="fa-solid fa-car"></i> Транспорт</li>
+                <li><i class="fa-solid fa-palette"></i> Графіка</li>
+                <li><i class="fa-solid fa-map"></i> Карти</li>
+                <li><i class="fa-solid fa-code"></i> Скрипти</li>
             </ul>
         </aside>
-        <main class="content-area">
-            <div class="hero-banner">
-                <h1>КАТЕГОРІЇ МОДІВ</h1>
-                <p>Зручна навігація по категоріях.</p>
+
+        <main class="content-area" style="flex: 1; display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="background: linear-gradient(90deg, #2e1065 0%, #0d111a 100%); border: 1px solid #161f30; border-radius: 12px; padding: 2rem;">
+                <div style="font-size: 0.8rem; color: #a855f7; margin-bottom: 6px; font-weight: 700;"><i class="fa-solid fa-list"></i> КАТЕГОРІЇ МОДІВ</div>
+                <h1 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.75rem;">ЗРУЧНИЙ ПОШУК ЗА ТЕМАМИ</h1>
+                <p style="color: #94a3b8; font-size: 0.85rem; max-width: 500px;">Обирай потрібний розділ, щоб швидко знайти те, що тобі потрібно для гри.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; padding: 1.2rem; display: flex; align-items: center; gap: 15px;">
+                    <div style="background: #1e1b4b; color: #a855f7; width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;"><i class="fa-solid fa-car"></i></div>
+                    <div>
+                        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 4px;">Транспорт</h3>
+                        <p style="color: #94a3b8; font-size: 0.75rem;">Реалістичні машини, мотоцикли та спецтехніка.</p>
+                    </div>
+                </div>
+                <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; padding: 1.2rem; display: flex; align-items: center; gap: 15px;">
+                    <div style="background: #1e1b4b; color: #a855f7; width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;"><i class="fa-solid fa-palette"></i></div>
+                    <div>
+                        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 4px;">Графіка</h3>
+                        <p style="color: #94a3b8; font-size: 0.75rem;">Шейдери, решейди та покращення візуалу.</p>
+                    </div>
+                </div>
+                <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; padding: 1.2rem; display: flex; align-items: center; gap: 15px;">
+                    <div style="background: #1e1b4b; color: #a855f7; width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;"><i class="fa-solid fa-map"></i></div>
+                    <div>
+                        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 4px;">Карти</h3>
+                        <p style="color: #94a3b8; font-size: 0.75rem;">Нові локації, міста та треки для гонок.</p>
+                    </div>
+                </div>
+                <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; padding: 1.2rem; display: flex; align-items: center; gap: 15px;">
+                    <div style="background: #1e1b4b; color: #a855f7; width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;"><i class="fa-solid fa-code"></i></div>
+                    <div>
+                        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 4px;">Скрипти</h3>
+                        <p style="color: #94a3b8; font-size: 0.75rem;">Ігрові плагіни, тренери та покращення геймплею.</p>
+                    </div>
+                </div>
             </div>
         </main>
+
     </div>
 
     <footer>
@@ -50,5 +97,6 @@
             <div class="footer-slogan">Більше модів — більше задоволення!</div>
         </div>
     </footer>
+
 </body>
 </html>
