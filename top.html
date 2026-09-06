@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Топ модів — TOP MODS</title>
+    <title>Топ — TOP MODS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header class="navbar">
         <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
         <nav class="nav-links">
@@ -17,7 +16,7 @@
             <a href="games.html">Ігри</a>
             <a href="categories.html">Категорії</a>
             <a href="top.html" class="active">Топ</a>
-            <a href="#">Підтримка</a>
+            <a href="support.html">Підтримка</a>
         </nav>
         <div class="nav-right">
             <div class="search-box">
@@ -29,81 +28,24 @@
         </div>
     </header>
 
-    <div class="main-container" style="display: flex; gap: 1.5rem;">
-        <!-- Лівий сайдбар -->
-        <aside class="left-sidebar" style="width: 220px; flex-shrink: 0;">
-            <div class="sidebar-section-title">ІГРИ</div>
-            <ul class="sidebar-list">
-                <li><i class="fa-solid fa-gamepad"></i> GTA V</li>
-                <li><i class="fa-solid fa-truck"></i> ETS 2</li>
-                <li><i class="fa-solid fa-car-burst"></i> BeamNG.drive</li>
-            </ul>
-
-            <div class="sidebar-section-title">КАТЕГОРІЇ</div>
-            <ul class="sidebar-list">
-                <li><i class="fa-solid fa-car"></i> Транспорт</li>
-                <li><i class="fa-solid fa-palette"></i> Графіка</li>
-                <li><i class="fa-solid fa-map"></i> Карти</li>
-                <li><i class="fa-solid fa-code"></i> Скрипти</li>
-            </ul>
+    <div class="main-container">
+        <aside class="left-sidebar">
+            <div class="sidebar-section-title">ТОП</div>
         </aside>
-
-        <!-- Основний контент -->
-        <main class="content-area" style="flex: 1;">
-            <div class="hero-banner" style="background: linear-gradient(90deg, #2e1065 0%, #0d111a 100%); border: 1px solid #161f30; border-radius: 12px; padding: 2rem; position: relative; overflow: hidden;">
-                <div class="hero-content">
-                    <div style="font-size: 0.8rem; color: #a855f7; margin-bottom: 6px; font-weight: 600;"><i class="fa-solid fa-crown"></i> ТОП МОДІВ</div>
-                    <h1 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.75rem;">НАЙПОПУЛЯРНІШІ ЗА ТИЖДЕНЬ</h1>
-                    <p style="color: #94a3b8; font-size: 0.85rem; max-width: 480px; margin-bottom: 1.2rem;">Тут зібрані моди, які найбільше завантажують та які обирають гравці.</p>
-                </div>
-            </div>
-
-            <!-- Вкладки фільтрації -->
-            <div style="display: flex; gap: 0.6rem; margin-top: 1rem; margin-bottom: 1.2rem; overflow-x: auto; padding-bottom: 4px;">
-                <button style="background: #7c3aed; color: #fff; border: none; padding: 6px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-download"></i> Топ за завантаженнями</button>
-                <button style="background: #0d111a; color: #94a3b8; border: 1px solid #161f30; padding: 6px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px;"><i class="fa-solid fa-star"></i> Топ за рейтингом</button>
-            </div>
-
-            <!-- Сітка карток модів -->
-            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.8rem;">
-                <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; position: relative;">
-                    <div style="position: absolute; top: 8px; left: 8px; background: #7c3aed; color: #fff; width: 22px; height: 22px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; z-index: 2;">1</div>
-                    <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=300" alt="Mod" style="width: 100%; height: 95px; object-fit: cover;">
-                    <div style="padding: 0.6rem; display: flex; flex-direction: column; flex: 1;">
-                        <h4 style="font-size: 0.8rem; color: #fff; margin-bottom: 2px;">Realistic Car Pack</h4>
-                        <div style="font-size: 0.7rem; color: #94a3b8; margin-bottom: 6px;">GTA V</div>
-                        <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: #64748b; margin-bottom: 8px;">
-                            <span><i class="fa-solid fa-download"></i> 1.24M</span>
-                            <span><i class="fa-solid fa-star" style="color: #eab308;"></i> 4.8</span>
-                        </div>
-                        <button style="background: #161f30; color: #a855f7; border: none; padding: 4px; border-radius: 6px; font-size: 0.7rem; font-weight: 600; cursor: pointer; margin-top: auto; width: 100%;">Встановити</button>
-                    </div>
-                </div>
+        <main class="content-area">
+            <div class="hero-banner">
+                <h1>НАЙПОПУЛЯРНІШІ МОДИ</h1>
+                <p>Топ завантажень за тиждень.</p>
             </div>
         </main>
-
-        <!-- Правий сайдбар -->
-        <aside style="width: 240px; flex-shrink: 0;">
-            <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; padding: 1rem;">
-                <div style="font-size: 0.8rem; font-weight: 700; color: #fff; margin-bottom: 12px;">
-                    <i class="fa-solid fa-chart-line" style="color: #a855f7;"></i> Топ завантажень
-                </div>
-                <div style="font-size: 0.75rem; color: #94a3b8;">Усі файти підключено успішно!</div>
-            </div>
-        </aside>
     </div>
 
     <footer>
         <div class="footer-inner">
             <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
-            <div class="footer-socials">
-                <i class="fa-brands fa-discord"></i>
-                <i class="fa-brands fa-telegram"></i>
-                <i class="fa-brands fa-youtube"></i>
-            </div>
+            <div class="footer-socials"><i class="fa-brands fa-discord"></i> <i class="fa-brands fa-telegram"></i></div>
             <div class="footer-slogan">Більше модів — більше задоволення!</div>
         </div>
     </footer>
-
 </body>
 </html>
