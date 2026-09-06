@@ -1,65 +1,608 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Inter', sans-serif;
 }
 
-header {
-    background-color: #1f1f1f;
-    text-align: center;
-    padding: 2rem;
-    border-bottom: 2px solid #333;
+body {
+    background-color: #0b0e14;
+    color: #e2e8f0;
 }
 
-header h1 {
-    margin: 0;
-    color: #4CAF50;
+/* Навігація */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121824;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #1e2636;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+.logo {
+    color: #a855f7;
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #fff;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-box {
+    background: #1a2234;
+    border: 1px solid #283548;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #64748b;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.icon-btn {
+    background: #1a2234;
+    border: 1px solid #283548;
+    color: #cbd5e1;
+    padding: 0.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background: #7c3aed;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: #6d28d9;
+}
+
+/* Система сторінок */
+.page {
+    display: none;
+}
+.page.active-page {
+    display: block;
+}
+
+/* Головний лейаут */
+.main-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 240px 1fr 300px;
     gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Сайдбар ігор */
+.sidebar {
+    background: #121824;
+    border: 1px solid #1e2636;
+    border-radius: 12px;
+    padding: 1rem;
+    height: fit-content;
+}
+
+.sidebar h3 {
+    font-size: 0.9rem;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    color: #94a3b8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.sidebar li:hover, .sidebar li.active {
+    background: #7c3aed;
+    color: #fff;
+}
+
+.mt-4 { margin-top: 1.5rem; }
+.mt-3 { margin-top: 1rem; }
+
+/* Банер */
+.hero-banner {
+    background: linear-gradient(90deg, #1e1b4b 0%, #0f172a 100%), url('https://images.unsplash.com/photo-1542282088-72c9c27ed0cd') center/cover;
+    background-blend-mode: overlay;
+    border: 1px solid #2e2a66;
+    border-radius: 16px;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    color: #94a3b8;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+    background: #7c3aed;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Сітки карток */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-header a {
+    color: #7c3aed;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.mods-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
 
 .mod-card {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    background: #121824;
+    border: 1px solid #1e2636;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
 }
 
-.mod-card h2 {
-    margin-top: 0;
-    color: #ffffff;
+.mod-card:hover {
+    transform: translateY(-4px);
+    border-color: #7c3aed;
 }
 
-.download-btn {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 0.7rem 1.2rem;
-    text-decoration: none;
+.mod-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.mod-info {
+    padding: 1rem;
+}
+
+.mod-info h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.tag {
+    background: #1e2636;
+    color: #a855f7;
+    font-size: 0.75rem;
+    padding: 2px 8px;
     border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.downloads {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* Правий сайдбар */
+.top-downloads-box, .request-box {
+    background: #121824;
+    border: 1px solid #1e2636;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.top-list {
+    list-style: none;
     margin-top: 1rem;
-    font-weight: bold;
-    transition: background 0.3s;
 }
 
-.download-btn:hover {
-    background-color: #45a049;
+.top-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
 }
 
-footer {
+.top-list span {
+    font-weight: 700;
+    color: #64748b;
+    width: 15px;
+}
+
+.top-list img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.request-box {
+    background: linear-gradient(135deg, #1e1b4b 0%, #121824 100%);
+    margin-top: 1.5rem;
     text-align: center;
     padding: 1.5rem;
-    background-color: #1f1f1f;
-    margin-top: 3rem;
-    color: #777;
+    border-color: #2e2a66;
 }
+
+.bolt-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.request-btn {
+    background: #7c3aed;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Сторінка моду (Деталі) */
+.mod-detail-container {
+    max-width: 1300px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.breadcrumb span:hover { color: #fff; }
+.active-crumb { color: #cbd5e1; }
+.close-detail { margin-left: auto; font-size: 1.2rem; cursor: pointer; }
+
+.mod-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 2rem;
+}
+
+.mod-header-card {
+    background: #121824;
+    border: 1px solid #1e2636;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.cover-big {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.mod-title-area h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.author {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.author span { color: #a855f7; }
+.rating { font-size: 0.9rem; }
+
+.download-action-box {
+    margin-left: auto;
+    text-align: center;
+}
+
+.download-huge-btn {
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+}
+
+.how-to-install {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 0.8rem;
+    text-decoration: none;
+}
+
+.screenshots-row {
+    margin-top: 1.5rem;
+    background: #121824;
+    border: 1px solid #1e2636;
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+.main-screen {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.screen-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.screen-grid img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0 1rem 0;
+    border-bottom: 1px solid #1e2636;
+    padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-weight: 600;
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+}
+
+.tab-btn.active {
+    color: #a855f7;
+    border-bottom: 2px solid #a855f7;
+}
+
+.description-box {
+    background: #121824;
+    border: 1px solid #1e2636;
+    border-radius: 16px;
+    padding: 1.5rem;
+    line-height: 1.6;
+}
+
+.features-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cbd5e1;
+    margin-bottom: 0.5rem;
+}
+
+.features-list i { color: #10b981; }
+
+.warning-banner {
+    background: rgba(234, 179, 8, 0.1);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.install-steps {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.install-steps li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0.8rem;
+    font-size: 0.95jl;
+}
+
+.install-steps span {
+    background: #7c3aed;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Сайдбар деталей */
+.info-card {
+    background: #121824;
+    border: 1px solid #1e2636;
+    border-radius: 16px;
+    padding: 1.2rem;
+}
+
+.info-card h4 { margin-bottom: 1rem; font-size: 1rem; }
+.info-card ul { list-style: none; }
+.info-card li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    color: #94a3b8;
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.plat {
+    background: #1a2234;
+    border: 1px solid #283548;
+    text-align: center;
+    padding: 0.6rem 0.2rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.similar-mod-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.similar-mod-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.similar-mod-item b { font-size: 0.85rem; display: block; color: #fff; }
+.similar-mod-item small { color: #64748b; font-size: 0.75rem; }
+.rating-sm { font-size: 0.75rem; color: #eab308; display: block; }
+
+/* Футер */
+footer {
+    background: #121824;
+    border-top: 1px solid #1e2636;
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.footer-slogan { color: #64748b; font-size: 0.9rem; }
+
+/* Допоміжні кольори */
+.text-orange { color: #f97316; }
+.text-purple { color: #a855f7; }
+.text-yellow { color: #eab308; }
+.text-gray { color: #64748b; }
