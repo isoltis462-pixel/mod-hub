@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Підтримка — TOP MODS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Навігація -->
+    <header class="navbar">
+        <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
+        <nav class="nav-links">
+            <a href="index.html">Головна</a>
+            <a href="games.html">Ігри</a>
+            <a href="categories.html">Категорії</a>
+            <a href="top.html">Топ</a>
+            <a href="support.html" class="active">Підтримка</a>
+        </nav>
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Пошук модів або ігор...">
+            </div>
+            <button class="icon-btn"><i class="fa-regular fa-user"></i></button>
+            <button class="login-btn">Увійти</button>
+        </div>
+    </header>
+
+    <!-- Основний контейнер -->
+    <div class="main-container" style="display: flex; gap: 1.5rem; max-width: 1400px; width: 100%; margin: 0 auto; padding: 1.5rem;">
+        
+        <!-- Лівий сайдбар -->
+        <aside class="left-sidebar" style="width: 220px; flex-shrink: 0;">
+            <div class="sidebar-section-title">ІГРИ</div>
+            <ul class="sidebar-list">
+                <li><i class="fa-solid fa-gamepad"></i> Усі ігри</li>
+                <li><i class="fa-solid fa-gamepad"></i> GTA V</li>
+                <li><i class="fa-solid fa-truck"></i> ETS 2</li>
+                <li><i class="fa-solid fa-car-burst"></i> BeamNG.drive</li>
+                <li><i class="fa-solid fa-cube"></i> Minecraft <span style="font-size: 0.65rem; background: #7c3aed; padding: 2px 6px; border-radius: 4px; margin-left: auto;">Скоро</span></li>
+            </ul>
+
+            <div class="sidebar-section-title">КАТЕГОРІЇ</div>
+            <ul class="sidebar-list">
+                <li><i class="fa-solid fa-car"></i> Транспорт</li>
+                <li><i class="fa-solid fa-palette"></i> Графіка</li>
+                <li><i class="fa-solid fa-map"></i> Карти</li>
+                <li><i class="fa-solid fa-code"></i> Скрипти</li>
+            </ul>
+        </aside>
+
+        <!-- Центральний контент -->
+        <main class="content-area" style="flex: 1; display: flex; flex-direction: column; gap: 1.5rem;">
+            
+            <!-- Великий банер -->
+            <div style="background: linear-gradient(90deg, #2e1065 0%, #0d111a 100%); border: 1px solid #161f30; border-radius: 12px; padding: 2rem; position: relative; overflow: hidden; display: flex; justify-content: space-between; align-items: center;">
+                <div style="z-index: 2; max-width: 500px;">
+                    <div style="font-size: 0.8rem; color: #a855f7; margin-bottom: 6px; font-weight: 700;"><i class="fa-solid fa-headset"></i> ПІДТРИМКА</div>
+                    <h1 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.75rem; line-height: 1.2;">МИ ЗАВЖДИ НА ЗВ'ЯЗКУ</h1>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 1.2rem;">Виникли технічні питання, проблеми з сайтом чи завантаженням? Наша команда готова допомогти тобі 24/7.</p>
+                    <button style="background: #7c3aed; color: #fff; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem;">
+                        Написати в підтримку <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Блок Технічної підтримки (одна акцентна тема) -->
+            <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; padding: 2rem;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                    <div style="background: #1e1b4b; color: #a855f7; width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <div>
+                        <h2 style="font-size: 1.2rem; font-weight: 700; color: #fff;">Технічна підтримка</h2>
+                        <p style="color: #94a3b8; font-size: 0.8rem;">Проблеми з сайтом, помилки завантаження, баги або робота модифікацій.</p>
+                    </div>
+                </div>
+
+                <div style="background: #111827; border: 1px solid #1f2937; border-radius: 8px; padding: 1.2rem; margin-top: 1rem;">
+                    <h4 style="font-size: 0.9rem; color: #fff; margin-bottom: 8px;">Опишіть вашу технічну проблему:</h4>
+                    <textarea placeholder="Вкажіть назву моду, гру та детально опишіть помилку..." style="width: 100%; height: 100px; background: #0d111a; border: 1px solid #374151; border-radius: 6px; padding: 10px; color: #fff; font-size: 0.85rem; resize: none; outline: none; margin-bottom: 10px;"></textarea>
+                    <button style="background: #7c3aed; color: #fff; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; cursor: pointer;">Надіслати запит</button>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Правий сайдбар -->
+        <aside style="width: 260px; flex-shrink: 0; display: flex; flex-direction: column; gap: 1rem;">
+            <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; padding: 1.2rem;">
+                <div style="font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-headset" style="color: #a855f7;"></i> Цілодобова підтримка 24/7
+                </div>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 12px; line-height: 1.4;">Ми відповідаємо максимально швидко — зазвичай протягом 5–30 хвилин.</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.75rem; color: #cbd5e1;">
+                    <div style="display: flex; align-items: center; gap: 8px;"><i class="fa-solid fa-envelope" style="color: #a855f7;"></i> support@topmods.gg</div>
+                    <div style="display: flex; align-items: center; gap: 8px;"><i class="fa-brands fa-telegram" style="color: #a855f7;"></i> @topmods_support</div>
+                    <div style="display: flex; align-items: center; gap: 8px;"><i class="fa-brands fa-discord" style="color: #a855f7;"></i> discord.gg/topmods</div>
+                </div>
+            </div>
+
+            <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; padding: 1.2rem;">
+                <div style="font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-bolt" style="color: #a855f7;"></i> Поширені питання
+                </div>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 12px;">Можливо, відповідь на ваше запитання вже є в нашій базі знань.</p>
+                <button style="width: 100%; background: #161f30; color: #fff; border: none; padding: 8px; border-radius: 8px; font-size: 0.75rem; font-weight: 600; cursor: pointer;">Перейти до FAQ <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-inner">
+            <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
+            <div class="footer-socials">
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="footer-slogan">Більше модів — більше задоволення!</div>
+        </div>
+    </footer>
+
+</body>
+</html>
