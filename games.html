@@ -1,1 +1,254 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP MODS — Каталог ігор</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <!-- Шапка сайту -->
+    <header class="navbar">
+        <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
+        <nav class="nav-links">
+            <a href="index.html">Головна</a>
+            <a href="games.html" class="active">Ігри</a>
+            <a href="#">Категорії</a>
+            <a href="#">Топ</a>
+            <a href="#">Підтримка</a>
+        </nav>
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Пошук ігор...">
+            </div>
+            <button class="icon-btn"><i class="fa-regular fa-user"></i></button>
+            <button class="login-btn">Увійти</button>
+        </div>
+    </header>
+
+    <!-- СТОРІНКА «ІГРИ» -->
+    <div class="main-container-games">
+        
+        <!-- Лівий сайдбар -->
+        <aside class="left-sidebar">
+            <div class="sidebar-section-title">Ігри</div>
+            <ul class="sidebar-list">
+                <li class="active"><i class="fa-solid fa-gamepad"></i> Усі ігри</li>
+                <li><i class="fa-solid fa-fire"></i> Популярні</li>
+                <li><i class="fa-solid fa-sparkles"></i> Новинки</li>
+                <li><i class="fa-solid fa-crosshairs"></i> Екшен</li>
+                <li><i class="fa-solid fa-hat-cowboy"></i> RPG</li>
+                <li><i class="fa-solid fa-flag-checkered"></i> Гонки</li>
+                <li><i class="fa-solid fa-train"></i> Симулятори</li>
+                <li><i class="fa-solid fa-chess"></i> Стратегії</li>
+                <li><i class="fa-solid fa-mountain-sun"></i> Пригоди</li>
+                <li><i class="fa-solid fa-shield-halved"></i> Виживання</li>
+            </ul>
+
+            <div class="sidebar-section-title" style="margin-top: 1.5rem;">Категорії</div>
+            <ul class="sidebar-list">
+                <li><i class="fa-solid fa-car"></i> Транспорт</li>
+                <li><i class="fa-solid fa-gun"></i> Зброя</li>
+                <li><i class="fa-solid fa-palette"></i> Графіка</li>
+                <li><i class="fa-solid fa-map"></i> Карти</li>
+                <li><i class="fa-solid fa-code"></i> Скрипти</li>
+                <li><i class="fa-solid fa-shirt"></i> Одяг / Скіни</li>
+                <li><i class="fa-solid fa-box"></i> Інше</li>
+            </ul>
+        </aside>
+
+        <!-- Центральний контент -->
+        <main class="content-area-games">
+            
+            <div class="games-hero-banner">
+                <div class="games-hero-content">
+                    <h1>ІГРИ НА TOP MODS<br>ГРАЙ БЕЗ ОБМЕЖЕНЬ</h1>
+                    <p>Найкращі ігри, моди та доповнення. Обирай, завантажуй і насолоджуйся улюбленими світами!</p>
+                    <button class="hero-btn"><i class="fa-solid fa-arrow-right"></i> Перейти до ігор</button>
+                </div>
+            </div>
+
+            <div class="filter-pills">
+                <button class="pill active"><i class="fa-solid fa-gamepad"></i> Всі</button>
+                <button class="pill"><i class="fa-solid fa-crosshairs"></i> Екшен</button>
+                <button class="pill"><i class="fa-solid fa-hat-cowboy"></i> RPG</button>
+                <button class="pill"><i class="fa-solid fa-flag-checkered"></i> Гонки</button>
+                <button class="pill"><i class="fa-solid fa-train"></i> Симулятори</button>
+                <button class="pill"><i class="fa-solid fa-chess"></i> Стратегії</button>
+                <button class="pill"><i class="fa-solid fa-mountain-sun"></i> Пригоди</button>
+                <button class="pill"><i class="fa-solid fa-shield-halved"></i> Виживання</button>
+            </div>
+
+            <!-- Популярні ігри -->
+            <div class="game-section">
+                <div class="section-block-header">
+                    <h2><i class="fa-solid fa-fire c-orange"></i> Популярні ігри</h2>
+                    <a href="#">Дивитись всі <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+                <div class="cards-grid-5">
+                    <div class="game-card">
+                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=400" alt="GTA V">
+                        <div class="game-card-body">
+                            <h4>Grand Theft Auto V</h4>
+                            <div class="game-tags"><span>Екшен</span> <span>Відкритий світ</span></div>
+                            <div class="game-stats"><i class="fa-solid fa-user"></i> 842.6K</div>
+                            <button class="play-btn">Грати <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=400" alt="RDR 2">
+                        <div class="game-card-body">
+                            <h4>Red Dead Redemption 2</h4>
+                            <div class="game-tags"><span>Екшен</span> <span>Пригоди</span></div>
+                            <div class="game-stats"><i class="fa-solid fa-user"></i> 1.2M</div>
+                            <button class="play-btn">Грати <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://images.unsplash.com/photo-1627856013091-fed6e4e30e7c?w=400" alt="Minecraft">
+                        <div class="game-card-body">
+                            <h4>Minecraft</h4>
+                            <div class="game-tags"><span>Симулятор</span> <span>Пісочниця</span></div>
+                            <div class="game-stats"><i class="fa-solid fa-user"></i> 2.4M</div>
+                            <button class="play-btn">Грати <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="Cyberpunk">
+                        <div class="game-card-body">
+                            <h4>Cyberpunk 2077</h4>
+                            <div class="game-tags"><span>RPG</span> <span>Відкритий світ</span></div>
+                            <div class="game-stats"><i class="fa-solid fa-user"></i> 960.3K</div>
+                            <button class="play-btn">Грати <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400" alt="Witcher 3">
+                        <div class="game-card-body">
+                            <h4>The Witcher 3</h4>
+                            <div class="game-tags"><span>RPG</span> <span>Пригоди</span></div>
+                            <div class="game-stats"><i class="fa-solid fa-user"></i> 1.1M</div>
+                            <button class="play-btn">Грати <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Новинки -->
+            <div class="game-section">
+                <div class="section-block-header">
+                    <h2><i class="fa-solid fa-sparkles c-purple"></i> Новинки</h2>
+                    <a href="#">Дивитись всі <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+                <div class="cards-grid-5">
+                    <div class="game-card">
+                        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400" alt="Hogwarts">
+                        <div class="game-card-body">
+                            <h4>Hogwarts Legacy</h4>
+                            <div class="game-tags"><span>RPG</span> <span>Пригоди</span></div>
+                            <div class="game-stats"><i class="fa-solid fa-user"></i> 654.2K</div>
+                            <button class="play-btn">Грати <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400" alt="Forza">
+                        <div class="game-card-body">
+                            <h4>Forza Horizon 5</h4>
+                            <div class="game-tags"><span>Гонки</span> <span>Відкритий світ</span></div>
+                            <div class="game-stats"><i class="fa-solid fa-user"></i> 932.7K</div>
+                            <button class="play-btn">Грати <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400" alt="Starfield">
+                        <div class="game-card-body">
+                            <h4>Starfield</h4>
+                            <div class="game-tags"><span>RPG</span> <span>Симулятор</span></div>
+                            <div class="game-stats"><i class="fa-solid fa-user"></i> 758.6K</div>
+                            <button class="play-btn">Грати <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400" alt="ARK">
+                        <div class="game-card-body">
+                            <h4>ARK: Survival Evolved</h4>
+                            <div class="game-tags"><span>Виживання</span> <span>Пісочниця</span></div>
+                            <div class="game-stats"><i class="fa-solid fa-user"></i> 621.9K</div>
+                            <button class="play-btn">Грати <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=400" alt="Horizon">
+                        <div class="game-card-body">
+                            <h4>Horizon Forbidden West</h4>
+                            <div class="game-tags"><span>Екшен</span> <span>Пригоди</span></div>
+                            <div class="game-stats"><i class="fa-solid fa-user"></i> 703.4K</div>
+                            <button class="play-btn">Грати <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Правий сайдбар -->
+        <aside class="right-sidebar">
+            <div class="top-box">
+                <h3><i class="fa-solid fa-trophy c-yellow"></i> Топ ігор за тиждень</h3>
+                <ul class="top-items-list">
+                    <li>
+                        <span class="top-rank">1</span>
+                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=100" alt="">
+                        <div class="top-item-info">
+                            <b>Grand Theft Auto V</b>
+                            <small><i class="fa-solid fa-user"></i> 842.6K</small>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="top-rank">2</span>
+                        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=100" alt="">
+                        <div class="top-item-info">
+                            <b>Red Dead Redemption 2</b>
+                            <small><i class="fa-solid fa-user"></i> 1.2M</small>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="top-rank">3</span>
+                        <img src="https://images.unsplash.com/photo-1627856013091-fed6e4e30e7c?w=100" alt="">
+                        <div class="top-item-info">
+                            <b>Minecraft</b>
+                            <small><i class="fa-solid fa-user"></i> 2.4M</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="support-box">
+                <i class="fa-solid fa-bolt c-purple" style="font-size: 1.3rem; margin-bottom: 0.4rem;"></i>
+                <h4>Не знайшов потрібної гри?</h4>
+                <p>Напиши нам, і ми додамо її у каталог!</p>
+                <button class="support-btn">Написати <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-inner">
+            <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
+            <div class="footer-socials">
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="footer-slogan">Більше ігор — більше можливостей!</div>
+        </div>
+    </footer>
+
+</body>
+</html>
