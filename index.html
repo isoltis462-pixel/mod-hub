@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOP MODS — Каталог модифікацій</title>
+    <!-- Підключення стилів -->
     <link rel="stylesheet" href="style.css">
+    <!-- Іконки та шрифти -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Шапка сайту -->
     <header class="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-crown"></i> TOP MODS
-        </div>
+        <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
         <nav class="nav-links">
-            <a href="#" class="active" onclick="switchPage('home')">Головна</a>
-            <a href="#" onclick="switchPage('home')">Ігри</a>
-            <a href="#" onclick="switchPage('home')">Категорії</a>
-            <a href="#" onclick="switchPage('home')">Топ</a>
-            <a href="#" onclick="switchPage('home')">Підтримка</a>
+            <a href="#" class="active">Головна</a>
+            <a href="#">Ігри</a>
+            <a href="#">Категорії</a>
+            <a href="#">Топ</a>
+            <a href="#">Підтримка</a>
         </nav>
         <div class="nav-right">
             <div class="search-box">
@@ -30,293 +32,203 @@
         </div>
     </header>
 
-    <div id="home-page" class="page active-page">
-        <main class="main-layout">
-            <aside class="sidebar">
-                <h3>Ігри</h3>
-                <ul>
-                    <li class="active"><i class="fa-solid fa-gamepad"></i> GTA V</li>
-                    <li><i class="fa-solid fa-horse"></i> RDR 2</li>
-                    <li><i class="fa-solid fa-cube"></i> Minecraft</li>
-                    <li><i class="fa-solid fa-truck"></i> ETS 2</li>
-                    <li><i class="fa-solid fa-crosshairs"></i> CS 2</li>
-                    <li><i class="fa-solid fa-car-burst"></i> BeamNG.drive</li>
-                    <li><i class="fa-solid fa-radiation"></i> Stalker 2</li>
-                    <li><i class="fa-solid fa-users"></i> FiveM</li>
-                    <li><i class="fa-solid fa-tree"></i> Terraria</li>
-                    <li><i class="fa-solid fa-folder-open"></i> Інші ігри</li>
-                </ul>
+    <!-- Основний контейнер контенту -->
+    <div class="main-container">
+        
+        <!-- Лівий сайдбар -->
+        <aside class="left-sidebar">
+            <div class="sidebar-section-title">Ігри</div>
+            <ul class="sidebar-list">
+                <li class="active"><i class="fa-solid fa-gamepad"></i> GTA V</li>
+                <li><i class="fa-solid fa-horse"></i> RDR 2</li>
+                <li><i class="fa-solid fa-cube"></i> Minecraft</li>
+                <li><i class="fa-solid fa-truck"></i> ETS 2</li>
+                <li><i class="fa-solid fa-crosshairs"></i> CS 2</li>
+                <li><i class="fa-solid fa-car-burst"></i> BeamNG.drive</li>
+                <li><i class="fa-solid fa-radiation"></i> Stalker 2</li>
+                <li><i class="fa-solid fa-users"></i> FiveM</li>
+                <li><i class="fa-solid fa-tree"></i> Terraria</li>
+                <li><i class="fa-solid fa-folder-open"></i> Інші ігри</li>
+            </ul>
 
-                <h3 class="mt-4">Категорії</h3>
-                <ul>
-                    <li><i class="fa-solid fa-car"></i> Транспорт</li>
-                    <li><i class="fa-solid fa-gun"></i> Зброя</li>
-                    <li><i class="fa-solid fa-palette"></i> Графіка</li>
-                    <li><i class="fa-solid fa-map"></i> Карти</li>
-                    <li><i class="fa-solid fa-code"></i> Скрипти</li>
-                    <li><i class="fa-solid fa-shirt"></i> Одяг / Скіни</li>
-                    <li><i class="fa-solid fa-box"></i> Інше</li>
-                </ul>
-            </aside>
+            <div class="sidebar-section-title">Категорії</div>
+            <ul class="sidebar-list">
+                <li><i class="fa-solid fa-car"></i> Транспорт</li>
+                <li><i class="fa-solid fa-gun"></i> Зброя</li>
+                <li><i class="fa-solid fa-palette"></i> Графіка</li>
+                <li><i class="fa-solid fa-map"></i> Карти</li>
+                <li><i class="fa-solid fa-code"></i> Скрипти</li>
+                <li><i class="fa-solid fa-shirt"></i> Одяг / Скіни</li>
+                <li><i class="fa-solid fa-box"></i> Інше</li>
+            </ul>
+        </aside>
 
-            <section class="content">
-                <div class="hero-banner">
-                    <div class="hero-text">
-                        <h1>НАЙКРАЩІ МОДИ<br>ДЛЯ ТВОЇХ ІГОР</h1>
-                        <p>Велика колекція модів для найпопулярніших ігор. Швидке завантаження. Без зайвих складнощів.</p>
-                        <button class="hero-btn" onclick="switchPage('mod')">Перейти до модів <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
+        <!-- Центральна частина -->
+        <main class="content-area">
+            <!-- Банер -->
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h1>НАЙКРАЩІ МОДИ<br>ДЛЯ ТВОЇХ ІГОР</h1>
+                    <p>Велика колекція модів для найпопулярніших ігор. Швидке завантаження. Без зайвих складнощів.</p>
+                    <button class="hero-btn">Перейти до модів <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
+            </div>
 
-                <div class="section-header">
-                    <h2><i class="fa-solid fa-fire text-orange"></i> Популярні моди</h2>
+            <!-- Популярні моди -->
+            <div>
+                <div class="section-block-header">
+                    <h2><i class="fa-solid fa-fire c-orange"></i> Популярні моди</h2>
                     <a href="#">Дивитись всі <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
-                <div class="mods-grid">
-                    <div class="mod-card" onclick="switchPage('mod')">
-                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=500&auto=format&fit=crop&q=60" alt="Car">
-                        <div class="mod-info">
+                <div class="cards-grid-4">
+                    <div class="mod-card">
+                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=400" alt="Car">
+                        <div class="mod-card-body">
                             <h4>Realistic Car Pack</h4>
                             <span class="tag">GTA V</span>
-                            <div class="downloads"><i class="fa-solid fa-download"></i> 125.4K</div>
+                            <div class="card-downloads"><i class="fa-solid fa-download"></i> 125.4K</div>
                         </div>
                     </div>
                     <div class="mod-card">
-                        <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=500&auto=format&fit=crop&q=60" alt="Stalker">
-                        <div class="mod-info">
+                        <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400" alt="Stalker">
+                        <div class="mod-card-body">
                             <h4>Українські скіни</h4>
                             <span class="tag">Stalker 2</span>
-                            <div class="downloads"><i class="fa-solid fa-download"></i> 98.7K</div>
+                            <div class="card-downloads"><i class="fa-solid fa-download"></i> 98.7K</div>
                         </div>
                     </div>
                     <div class="mod-card">
-                        <img src="https://images.unsplash.com/photo-1627856013091-fed6e4e30e7c?w=500&auto=format&fit=crop&q=60" alt="Minecraft">
-                        <div class="mod-info">
+                        <img src="https://images.unsplash.com/photo-1627856013091-fed6e4e30e7c?w=400" alt="Minecraft">
+                        <div class="mod-card-body">
                             <h4>Better Minecraft</h4>
                             <span class="tag">Minecraft</span>
-                            <div class="downloads"><i class="fa-solid fa-download"></i> 201.2K</div>
+                            <div class="card-downloads"><i class="fa-solid fa-download"></i> 201.2K</div>
                         </div>
                     </div>
                     <div class="mod-card">
-                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=500&auto=format&fit=crop&q=60" alt="Truck">
-                        <div class="mod-info">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400" alt="Truck">
+                        <div class="mod-card-body">
                             <h4>Realistic Trucks</h4>
                             <span class="tag">ETS 2</span>
-                            <div class="downloads"><i class="fa-solid fa-download"></i> 76.3K</div>
+                            <div class="card-downloads"><i class="fa-solid fa-download"></i> 76.3K</div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="section-header mt-4">
-                    <h2><i class="fa-solid fa-clock text-purple"></i> Останні додані</h2>
+            <!-- Останні додані -->
+            <div>
+                <div class="section-block-header">
+                    <h2><i class="fa-solid fa-clock c-purple"></i> Останні додані</h2>
                     <a href="#">Дивитись всі <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
-                <div class="mods-grid">
+                <div class="cards-grid-4">
                     <div class="mod-card">
-                        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=60" alt="RDR2">
-                        <div class="mod-info">
+                        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=400" alt="RDR2">
+                        <div class="mod-card-body">
                             <h4>RDR 2 - Realistic Graphics</h4>
                             <span class="tag">RDR 2</span>
-                            <div class="downloads"><i class="fa-solid fa-download"></i> 45.6K</div>
+                            <div class="card-downloads"><i class="fa-solid fa-download"></i> 45.6K</div>
                         </div>
                     </div>
                     <div class="mod-card">
-                        <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=500&auto=format&fit=crop&q=60" alt="GTA">
-                        <div class="mod-info">
+                        <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=400" alt="GTA">
+                        <div class="mod-card-body">
                             <h4>GTA V - Літаючі машини</h4>
                             <span class="tag">GTA V</span>
-                            <div class="downloads"><i class="fa-solid fa-download"></i> 72.1K</div>
+                            <div class="card-downloads"><i class="fa-solid fa-download"></i> 72.1K</div>
                         </div>
                     </div>
                     <div class="mod-card">
-                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&auto=format&fit=crop&q=60" alt="CS2">
-                        <div class="mod-info">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400" alt="CS2">
+                        <div class="mod-card-body">
                             <h4>CS 2 - Aim Config</h4>
                             <span class="tag">CS 2</span>
-                            <div class="downloads"><i class="fa-solid fa-download"></i> 38.9K</div>
+                            <div class="card-downloads"><i class="fa-solid fa-download"></i> 38.9K</div>
                         </div>
                     </div>
                     <div class="mod-card">
-                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&auto=format&fit=crop&q=60" alt="MC">
-                        <div class="mod-info">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400" alt="MC">
+                        <div class="mod-card-body">
                             <h4>Minecraft - 1000+ модів</h4>
                             <span class="tag">Minecraft</span>
-                            <div class="downloads"><i class="fa-solid fa-download"></i> 112.3K</div>
+                            <div class="card-downloads"><i class="fa-solid fa-download"></i> 112.3K</div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <aside class="right-sidebar">
-                <div class="top-downloads-box">
-                    <h3><i class="fa-solid fa-trophy text-yellow"></i> Топ завантажень</h3>
-                    <ul class="top-list">
-                        <li><span>1</span> <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=100" alt=""> <div><b>Realistic Car Pack</b><br><small><i class="fa-solid fa-download"></i> 125.4K</small></div></li>
-                        <li><span>2</span> <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=100" alt=""> <div><b>Українські скіни</b><br><small><i class="fa-solid fa-download"></i> 98.7K</small></div></li>
-                        <li><span>3</span> <img src="https://images.unsplash.com/photo-1627856013091-fed6e4e30e7c?w=100" alt=""> <div><b>Better Minecraft</b><br><small><i class="fa-solid fa-download"></i> 201.2K</small></div></li>
-                        <li><span>4</span> <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=100" alt=""> <div><b>Realistic Trucks</b><br><small><i class="fa-solid fa-download"></i> 76.3K</small></div></li>
-                        <li><span>5</span> <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=100" alt=""> <div><b>GTA V - Літаючі машини</b><br><small><i class="fa-solid fa-download"></i> 72.1K</small></div></li>
-                    </ul>
-                </div>
-
-                <div class="request-box">
-                    <i class="fa-solid fa-bolt text-purple bolt-icon"></i>
-                    <h4>Не знайшов потрібний мод?</h4>
-                    <p>Напиши нам, і ми додамо його</p>
-                    <button class="request-btn">Написати <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </aside>
+            </div>
         </main>
-    </div>
 
-    <div id="mod-page" class="page">
-        <div class="mod-detail-container">
-            <div class="breadcrumb">
-                <span onclick="switchPage('home')">Головна</span> <i class="fa-solid fa-chevron-right"></i> 
-                <span>GTA V</span> <i class="fa-solid fa-chevron-right"></i> 
-                <span class="active-crumb">Realistic Graphics Mod</span>
-                <i class="fa-solid fa-xmark close-detail" onclick="switchPage('home')"></i>
+        <!-- Правий сайдбар -->
+        <aside class="right-sidebar">
+            <div class="top-box">
+                <h3><i class="fa-solid fa-trophy c-yellow"></i> Топ завантажень</h3>
+                <ul class="top-items-list">
+                    <li>
+                        <span class="top-rank">1</span>
+                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=100" alt="">
+                        <div class="top-item-info">
+                            <b>Realistic Car Pack</b>
+                            <small><i class="fa-solid fa-download"></i> 125.4K</small>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="top-rank">2</span>
+                        <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=100" alt="">
+                        <div class="top-item-info">
+                            <b>Українські скіни</b>
+                            <small><i class="fa-solid fa-download"></i> 98.7K</small>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="top-rank">3</span>
+                        <img src="https://images.unsplash.com/photo-1627856013091-fed6e4e30e7c?w=100" alt="">
+                        <div class="top-item-info">
+                            <b>Better Minecraft</b>
+                            <small><i class="fa-solid fa-download"></i> 201.2K</small>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="top-rank">4</span>
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=100" alt="">
+                        <div class="top-item-info">
+                            <b>Realistic Trucks</b>
+                            <small><i class="fa-solid fa-download"></i> 76.3K</small>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="top-rank">5</span>
+                        <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=100" alt="">
+                        <div class="top-item-info">
+                            <b>GTA V - Літаючі машини</b>
+                            <small><i class="fa-solid fa-download"></i> 72.1K</small>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
-            <div class="mod-detail-grid">
-                <div class="mod-main-info">
-                    <div class="mod-header-card">
-                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=500" alt="Mod Cover" class="cover-big">
-                        <div class="mod-title-area">
-                            <h2>Realistic Graphics Mod</h2>
-                            <div class="badges">
-                                <span class="tag"><i class="fa-solid fa-gamepad"></i> GTA V</span>
-                                <span class="tag"><i class="fa-solid fa-palette"></i> Графіка</span>
-                            </div>
-                            <p class="author"><i class="fa-regular fa-user"></i> Автор: <span>VisualMods</span></p>
-                            <div class="rating">
-                                <i class="fa-solid fa-star text-yellow"></i> <b>4.8</b> <span class="text-gray">(12.4K оцінок)</span>
-                            </div>
-                        </div>
-                        <div class="download-action-box">
-                            <button class="download-huge-btn">
-                                <i class="fa-solid fa-download"></i> Скачати <br><small>(1.2 GB)</small>
-                            </button>
-                            <a href="#install" class="how-to-install"><i class="fa-regular fa-circle-question"></i> Як встановити?</a>
-                        </div>
-                    </div>
-
-                    <div class="screenshots-row">
-                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=500" class="main-screen">
-                        <div class="screen-grid">
-                            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=200">
-                            <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=200">
-                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=200">
-                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=200">
-                        </div>
-                    </div>
-
-                    <div class="tabs">
-                        <button class="tab-btn active">Опис</button>
-                        <button class="tab-btn">Скріншоти</button>
-                        <button class="tab-btn">Відео</button>
-                        <button class="tab-btn">Відгуки (142)</button>
-                    </div>
-
-                    <div class="description-box">
-                        <h3><i class="fa-solid fa-file-lines"></i> Про мод</h3>
-                        <p>Realistic Graphics Mod — це повний графічний мод для GTA V, який робить гру максимально реалістичною. Мод покращує текстури, освітлення, тіні, погоду, відображення та багато іншого. Тепер Лос-Сантос виглядає як справжнє місто з неймовірною деталізацією!</p>
-                        
-                        <ul class="features-list">
-                            <li><i class="fa-solid fa-check"></i> Покращені текстури (HD/4K)</li>
-                            <li><i class="fa-solid fa-check"></i> Реалістичне освітлення та тіні</li>
-                            <li><i class="fa-solid fa-check"></i> Динамічна погода</li>
-                            <li><i class="fa-solid fa-check"></i> Нові ефекти (дощ, відображення, туман)</li>
-                            <li><i class="fa-solid fa-check"></i> Оптимізація під слабкі ПК (є окрема версія)</li>
-                        </ul>
-
-                        <div class="warning-banner">
-                            <i class="fa-solid fa-bolt text-yellow"></i> <b>Рекомендовано:</b> перед встановленням зробіть резервну копію гри!
-                        </div>
-
-                        <h3 class="mt-4" id="install"><i class="fa-solid fa-list-ol"></i> Інструкція з встановлення</h3>
-                        <ol class="install-steps">
-                            <li><span>1</span> Завантажте архів з модом.</li>
-                            <li><span>2</span> Розпакуйте файли в папку з грою (GTA V).</li>
-                            <li><span>3</span> Замініть потрібні файли (якщо буде потрібно).</li>
-                            <li><span>4</span> Запустіть гру та насолоджуйтесь новою графікою!</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <div class="mod-sidebar-info">
-                    <div class="info-card">
-                        <h4>Інформація про мод</h4>
-                        <ul>
-                            <li><span><i class="fa-solid fa-code-branch"></i> Версія</span> <b>1.0.8</b></li>
-                            <li><span><i class="fa-solid fa-hard-drive"></i> Розмір</span> <b>1.2 GB</b></li>
-                            <li><span><i class="fa-regular fa-clock"></i> Оновлення</span> <b>12.05.2025</b></li>
-                            <li><span><i class="fa-solid fa-shield-halved"></i> Сумісність</span> <b>GTA V (Steam / Epic Games)</b></li>
-                            <li><span><i class="fa-regular fa-user"></i> Автор</span> <b>VisualMods</b></li>
-                        </ul>
-                    </div>
-
-                    <div class="info-card mt-3">
-                        <h4>Підтримувані платформи</h4>
-                        <div class="platforms-grid">
-                            <div class="plat"><i class="fa-brands fa-windows"></i> Windows</div>
-                            <div class="plat"><i class="fa-brands fa-steam"></i> Steam</div>
-                            <div class="plat"><i class="fa-solid fa-gamepad"></i> Epic Games</div>
-                        </div>
-                    </div>
-
-                    <div class="info-card mt-3">
-                        <h4>Схожі моди</h4>
-                        <div class="similar-mod-item">
-                            <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=100">
-                            <div>
-                                <b>Enhanced Lighting Mod</b>
-                                <small><i class="fa-solid fa-gamepad"></i> GTA V · Графіка</small>
-                                <span class="rating-sm"><i class="fa-solid fa-star"></i> 4.6 · 856K</span>
-                            </div>
-                        </div>
-                        <div class="similar-mod-item">
-                            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=100">
-                            <div>
-                                <b>Realistic Car Pack</b>
-                                <small><i class="fa-solid fa-gamepad"></i> GTA V · Транспорт</small>
-                                <span class="rating-sm"><i class="fa-solid fa-star"></i> 4.7 · 1.2M</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="support-box">
+                <i class="fa-solid fa-bolt c-purple" style="font-size: 1.3rem; margin-bottom: 0.4rem;"></i>
+                <h4>Не знайшов потрібний мод?</h4>
+                <p>Напиши нам, і ми додамо його</p>
+                <button class="support-btn">Написати <i class="fa-solid fa-arrow-right"></i></button>
             </div>
-        </div>
+        </aside>
+
     </div>
 
+    <!-- Футер -->
     <footer>
-        <div class="footer-content">
+        <div class="footer-inner">
             <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
             <div class="footer-socials">
                 <i class="fa-brands fa-discord"></i>
                 <i class="fa-brands fa-telegram"></i>
                 <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-vk"></i>
             </div>
             <div class="footer-slogan">Більше модів — більше задоволення!</div>
         </div>
     </footer>
 
-    <script>
-        function switchPage(pageName) {
-            const homePage = document.getElementById('home-page');
-            const modPage = document.getElementById('mod-page');
-            
-            if(pageName === 'mod') {
-                homePage.classList.remove('active-page');
-                modPage.classList.add('active-page');
-                window.scrollTo(0, 0);
-            } else {
-                modPage.classList.remove('active-page');
-                homePage.classList.add('active-page');
-                window.scrollTo(0, 0);
-            }
-        }
-    </script>
 </body>
 </html>
