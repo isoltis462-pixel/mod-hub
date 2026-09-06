@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Категорії модів — TOP MODS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header class="navbar">
+        <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
+        <nav class="nav-links">
+            <a href="index.html">Головна</a>
+            <a href="games.html">Ігри</a>
+            <a href="categories.html" class="active">Категорії</a>
+            <a href="#">Топ</a>
+            <a href="#">Підтримка</a>
+        </nav>
+        <div class="nav-right">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Пошук модів або ігор...">
+            </div>
+            <button class="icon-btn"><i class="fa-regular fa-user"></i></button>
+            <button class="login-btn">Увійти</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="left-sidebar">
+            <div class="sidebar-section-title">ІГРИ</div>
+            <ul class="sidebar-list">
+                <li><i class="fa-solid fa-gamepad"></i> GTA V</li>
+                <li><i class="fa-solid fa-truck"></i> ETS 2</li>
+                <li><i class="fa-solid fa-car-burst"></i> BeamNG.drive</li>
+                <li style="opacity: 0.5; cursor: not-allowed;"><i class="fa-solid fa-cube"></i> Minecraft <span style="font-size: 10px; background: #161f30; padding: 2px 5px; border-radius: 4px; margin-left: 5px;">Скоро</span></li>
+            </ul>
+
+            <div class="sidebar-section-title">КАТЕГОРІЇ</div>
+            <ul class="sidebar-list">
+                <li class="active"><i class="fa-solid fa-car"></i> Транспорт</li>
+                <li><i class="fa-solid fa-palette"></i> Графіка</li>
+                <li><i class="fa-solid fa-map"></i> Карти</li>
+                <li><i class="fa-solid fa-code"></i> Скрипти</li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 6px;">Головна > Категорії</div>
+                    <h1>КАТЕГОРІЇ МОДІВ<br>ОБИРАЙ ТЕ, ЩО ЦІКАВО</h1>
+                    <p>Зручна навігація по категоріях модів. Знайди саме те, що потрібно для свого улюбленого ігрового світу.</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-block-header">
+                    <h2>Категорії модів</h2>
+                    <div style="display: flex; gap: 8px;">
+                        <span style="background: #7c3aed; color: #fff; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; cursor: pointer;">Всі категорії</span>
+                        <span style="background: #161f30; color: #94a3b8; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; cursor: pointer;">Популярні</span>
+                        <span style="background: #161f30; color: #94a3b8; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; cursor: pointer;">Нові</span>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+                    <!-- Картка 1 -->
+                    <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=400" alt="Транспорт" style="width:100%; height:110px; object-fit:cover;">
+                        <div style="padding: 0.9rem; display: flex; flex-direction: column; flex-grow: 1;">
+                            <h4 style="font-size: 0.9rem; color:#fff; margin-bottom: 4px;"><i class="fa-solid fa-car" style="color: #a855f7; margin-right: 6px;"></i> Транспорт</h4>
+                            <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 12px; line-height: 1.3;">Автомобілі, вантажівки, мотоцикли, авіація та інший транспорт.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; font-size: 0.75rem; color: #64748b;">
+                                <span><i class="fa-solid fa-box"></i> 1243 моди</span>
+                                <i class="fa-solid fa-arrow-right" style="color: #a855f7;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Картка 2 -->
+                    <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=400" alt="Графіка" style="width:100%; height:110px; object-fit:cover;">
+                        <div style="padding: 0.9rem; display: flex; flex-direction: column; flex-grow: 1;">
+                            <h4 style="font-size: 0.9rem; color:#fff; margin-bottom: 4px;"><i class="fa-solid fa-palette" style="color: #a855f7; margin-right: 6px;"></i> Графіка</h4>
+                            <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 12px; line-height: 1.3;">Текстури, ENB, шейдери, покращення графіки та візуальні ефекти.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; font-size: 0.75rem; color: #64748b;">
+                                <span><i class="fa-solid fa-box"></i> 856 модів</span>
+                                <i class="fa-solid fa-arrow-right" style="color: #a855f7;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Картка 3 -->
+                    <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=400" alt="Карти" style="width:100%; height:110px; object-fit:cover;">
+                        <div style="padding: 0.9rem; display: flex; flex-direction: column; flex-grow: 1;">
+                            <h4 style="font-size: 0.9rem; color:#fff; margin-bottom: 4px;"><i class="fa-solid fa-map" style="color: #a855f7; margin-right: 6px;"></i> Карти</h4>
+                            <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 12px; line-height: 1.3;">Нові карти, локації, міста, острови та цілі світи.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; font-size: 0.75rem; color: #64748b;">
+                                <span><i class="fa-solid fa-box"></i> 642 моди</span>
+                                <i class="fa-solid fa-arrow-right" style="color: #a855f7;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Картка 4 -->
+                    <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400" alt="Скрипти" style="width:100%; height:110px; object-fit:cover;">
+                        <div style="padding: 0.9rem; display: flex; flex-direction: column; flex-grow: 1;">
+                            <h4 style="font-size: 0.9rem; color:#fff; margin-bottom: 4px;"><i class="fa-solid fa-code" style="color: #a855f7; margin-right: 6px;"></i> Скрипти</h4>
+                            <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 12px; line-height: 1.3;">Розширення ігрового процесу, нові механіки та можливості.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; font-size: 0.75rem; color: #64748b;">
+                                <span><i class="fa-solid fa-box"></i> 521 мод</span>
+                                <i class="fa-solid fa-arrow-right" style="color: #a855f7;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
+            <div class="footer-socials">
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="footer-slogan">Більше модів — більше задоволення!</div>
+        </div>
+    </footer>
+
+</body>
+</html>
