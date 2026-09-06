@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOP MODS — Каталог модифікацій</title>
+    <title>TOP MODS — Головна</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,13 +16,13 @@
             <a href="index.html" class="active">Головна</a>
             <a href="games.html">Ігри</a>
             <a href="categories.html">Категорії</a>
-            <a href="#">Топ</a>
+            <a href="top.html">Топ</a>
             <a href="#">Підтримка</a>
         </nav>
         <div class="nav-right">
             <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Пошук модів...">
+                <input type="text" placeholder="Пошук модів або ігор...">
             </div>
             <button class="icon-btn"><i class="fa-regular fa-user"></i></button>
             <button class="login-btn">Увійти</button>
@@ -31,15 +31,15 @@
 
     <div class="main-container">
         <aside class="left-sidebar">
-            <div class="sidebar-section-title">Ігри</div>
+            <div class="sidebar-section-title">ІГРИ</div>
             <ul class="sidebar-list">
-                <li class="active"><i class="fa-solid fa-gamepad"></i> GTA V</li>
+                <li class="active"><i class="fa-solid fa-gamepad"></i> Усі ігри</li>
+                <li><i class="fa-solid fa-gamepad"></i> GTA V</li>
                 <li><i class="fa-solid fa-truck"></i> ETS 2</li>
                 <li><i class="fa-solid fa-car-burst"></i> BeamNG.drive</li>
-                <li style="opacity: 0.5; cursor: not-allowed;"><i class="fa-solid fa-cube"></i> Minecraft <span style="font-size: 10px; background: #161f30; padding: 2px 5px; border-radius: 4px; margin-left: 5px;">Скоро</span></li>
             </ul>
 
-            <div class="sidebar-section-title">Категорії</div>
+            <div class="sidebar-section-title">КАТЕГОРІЇ</div>
             <ul class="sidebar-list">
                 <li><i class="fa-solid fa-car"></i> Транспорт</li>
                 <li><i class="fa-solid fa-palette"></i> Графіка</li>
@@ -51,42 +51,9 @@
         <main class="content-area">
             <div class="hero-banner">
                 <div class="hero-content">
-                    <h1>НАЙКРАЩІ МОДИ<br>ДЛЯ GTA V, ETS 2 ТА BEAMNG</h1>
-                    <p>Велика колекція якісних модифікацій. Швидке завантаження без зайвих складнощів.</p>
-                    <button class="hero-btn" onclick="window.location.href='games.html'">Перейти до ігор <i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-
-            <div>
-                <div class="section-block-header">
-                    <h2><i class="fa-solid fa-fire c-orange"></i> Популярні моди</h2>
-                    <a href="categories.html">Дивитись всі <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
-                <div class="cards-grid-4" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem;">
-                    <div class="mod-card" style="background: #0d111a; border: 1px solid #161f30; border-radius: 10px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=400" alt="GTA V" style="width:100%; height:120px; object-fit:cover;">
-                        <div class="mod-card-body" style="padding: 0.7rem;">
-                            <h4 style="font-size: 0.85rem; color:#fff; margin-bottom:4px;">Realistic Car Pack</h4>
-                            <span class="tag" style="background: #161f30; color: #a855f7; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px;">GTA V</span>
-                            <div class="card-downloads" style="font-size: 0.75rem; color: #64748b; margin-top:8px;"><i class="fa-solid fa-download"></i> 125.4K</div>
-                        </div>
-                    </div>
-                    <div class="mod-card" style="background: #0d111a; border: 1px solid #161f30; border-radius: 10px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400" alt="ETS 2" style="width:100%; height:120px; object-fit:cover;">
-                        <div class="mod-card-body" style="padding: 0.7rem;">
-                            <h4 style="font-size: 0.85rem; color:#fff; margin-bottom:4px;">Realistic Trucks</h4>
-                            <span class="tag" style="background: #161f30; color: #a855f7; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px;">ETS 2</span>
-                            <div class="card-downloads" style="font-size: 0.75rem; color: #64748b; margin-top:8px;"><i class="fa-solid fa-download"></i> 76.3K</div>
-                        </div>
-                    </div>
-                    <div class="mod-card" style="background: #0d111a; border: 1px solid #161f30; border-radius: 10px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400" alt="BeamNG" style="width:100%; height:120px; object-fit:cover;">
-                        <div class="mod-card-body" style="padding: 0.7rem;">
-                            <h4 style="font-size: 0.85rem; color:#fff; margin-bottom:4px;">Custom Crash Physics</h4>
-                            <span class="tag" style="background: #161f30; color: #a855f7; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px;">BeamNG.drive</span>
-                            <div class="card-downloads" style="font-size: 0.75rem; color: #64748b; margin-top:8px;"><i class="fa-solid fa-download"></i> 110.2K</div>
-                        </div>
-                    </div>
+                    <h1>ЗБІРНИК НАЙКРАЩИХ МОДІВ ДЛЯ ІГОР</h1>
+                    <p>Знаходь, завантажуй та встановлюй якісні модифікації для улюблених ігор у пару кліків.</p>
+                    <button class="hero-btn">Переглянути топ <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </main>
