@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Навігація -->
     <header class="navbar">
         <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
         <nav class="nav-links">
@@ -28,24 +30,89 @@
         </div>
     </header>
 
-    <div class="main-container">
-        <aside class="left-sidebar">
-            <div class="sidebar-section-title">ТОП</div>
+    <!-- Основний контейнер -->
+    <div class="main-container" style="display: flex; gap: 1.5rem; max-width: 1400px; width: 100%; margin: 0 auto; padding: 1.5rem;">
+        
+        <!-- Лівий сайдбар -->
+        <aside class="left-sidebar" style="width: 220px; flex-shrink: 0;">
+            <div class="sidebar-section-title">ІГРИ</div>
+            <ul class="sidebar-list">
+                <li><i class="fa-solid fa-gamepad"></i> Усі ігри</li>
+                <li><i class="fa-solid fa-gamepad"></i> GTA V</li>
+                <li><i class="fa-solid fa-truck"></i> ETS 2</li>
+                <li><i class="fa-solid fa-car-burst"></i> BeamNG.drive</li>
+            </ul>
+
+            <div class="sidebar-section-title">КАТЕГОРІЇ</div>
+            <ul class="sidebar-list">
+                <li><i class="fa-solid fa-car"></i> Транспорт</li>
+                <li><i class="fa-solid fa-palette"></i> Графіка</li>
+                <li><i class="fa-solid fa-map"></i> Карти</li>
+                <li><i class="fa-solid fa-code"></i> Скрипти</li>
+            </ul>
         </aside>
-        <main class="content-area">
-            <div class="hero-banner">
-                <h1>НАЙПОПУЛЯРНІШІ МОДИ</h1>
-                <p>Топ завантажень за тиждень.</p>
+
+        <!-- Центральний контент -->
+        <main class="content-area" style="flex: 1; display: flex; flex-direction: column; gap: 1.5rem;">
+            
+            <div style="background: linear-gradient(90deg, #2e1065 0%, #0d111a 100%); border: 1px solid #161f30; border-radius: 12px; padding: 2rem;">
+                <div style="font-size: 0.8rem; color: #a855f7; margin-bottom: 6px; font-weight: 700;"><i class="fa-solid fa-fire"></i> РЕЙТИНГ МОДІВ</div>
+                <h1 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.75rem;">НАЙПОПУЛЯРНІШЕ ЗА ТИЖДЕНЬ</h1>
+                <p style="color: #94a3b8; font-size: 0.85rem; max-width: 500px;">Добірка найкращих та найчастіше завантажуваних модифікацій за версією користувачів.</p>
             </div>
+
+            <!-- Список топ модів -->
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 10px; padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span style="font-size: 1.2rem; font-weight: 800; color: #a855f7; width: 25px;">#1</span>
+                        <div>
+                            <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 2px;">Realistic Graphics Mod v4.2</h4>
+                            <span style="color: #94a3b8; font-size: 0.75rem;">GTA V • Графіка</span>
+                        </div>
+                    </div>
+                    <span style="color: #22c55e; font-size: 0.8rem; font-weight: 600;"><i class="fa-solid fa-download"></i> 24,500 завантажень</span>
+                </div>
+
+                <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 10px; padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span style="font-size: 1.2rem; font-weight: 800; color: #a855f7; width: 25px;">#2</span>
+                        <div>
+                            <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 2px;">BMW M5 Competition F90</h4>
+                            <span style="color: #94a3b8; font-size: 0.75rem;">GTA V • Транспорт</span>
+                        </div>
+                    </div>
+                    <span style="color: #22c55e; font-size: 0.8rem; font-weight: 600;"><i class="fa-solid fa-download"></i> 19,200 завантажень</span>
+                </div>
+
+                <div style="background: #0d111a; border: 1px solid #161f30; border-radius: 10px; padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span style="font-size: 1.2rem; font-weight: 800; color: #a855f7; width: 25px;">#3</span>
+                        <div>
+                            <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 2px;">ProMods Europe Map</h4>
+                            <span style="color: #94a3b8; font-size: 0.75rem;">ETS 2 • Карти</span>
+                        </div>
+                    </div>
+                    <span style="color: #22c55e; font-size: 0.8rem; font-weight: 600;"><i class="fa-solid fa-download"></i> 15,800 завантажень</span>
+                </div>
+            </div>
+
         </main>
+
     </div>
 
+    <!-- Футер -->
     <footer>
         <div class="footer-inner">
             <div class="logo"><i class="fa-solid fa-crown"></i> TOP MODS</div>
-            <div class="footer-socials"><i class="fa-brands fa-discord"></i> <i class="fa-brands fa-telegram"></i></div>
+            <div class="footer-socials">
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
             <div class="footer-slogan">Більше модів — більше задоволення!</div>
         </div>
     </footer>
+
 </body>
 </html>
