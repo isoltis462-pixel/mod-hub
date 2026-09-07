@@ -49,7 +49,6 @@
         .auth-logo h2 {
             font-size: 1.5rem;
             font-weight: 800;
-            letter-spacing: 1px;
             margin: 0;
         }
         .auth-logo p {
@@ -73,9 +72,9 @@
             color: #94a3b8;
             cursor: pointer;
             border-radius: 8px;
-            transition: 0.2s;
             border: none;
             background: transparent;
+            transition: 0.2s;
         }
         .auth-tab.active {
             background: #7c3aed;
@@ -112,11 +111,9 @@
             color: #fff;
             font-size: 0.9rem;
             outline: none;
-            transition: 0.2s;
         }
         .input-wrapper input:focus {
             border-color: #a855f7;
-            box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
         }
         .auth-btn {
             width: 100%;
@@ -128,39 +125,7 @@
             font-weight: 600;
             font-size: 0.95rem;
             cursor: pointer;
-            transition: 0.2s;
             margin-top: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        .auth-btn:hover {
-            opacity: 0.9;
-        }
-        .social-login {
-            display: flex;
-            gap: 10px;
-            margin-top: 1rem;
-        }
-        .social-btn {
-            flex: 1;
-            background: #131b2e;
-            border: 1px solid #1f293d;
-            border-radius: 8px;
-            padding: 10px;
-            color: #fff;
-            font-size: 0.85rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            transition: 0.2s;
-            text-decoration: none;
-        }
-        .social-btn:hover {
-            background: #1f293d;
         }
         .back-home {
             text-align: center;
@@ -188,16 +153,24 @@
         </div>
 
         <div class="auth-tabs">
-            <button class="auth-tab active" onclick="switchTab('login')">Вхід</button>
-            <button class="auth-tab" onclick="switchTab('register')">Реєстрація</button>
+            <button class="auth-tab active" type="button" onclick="setMode('login')">Вхід</button>
+            <button class="auth-tab" type="button" onclick="setMode('register')">Реєстрація</button>
         </div>
 
-        <form action="profile.html" method="GET">
+        <form id="authForm" onsubmit="handleAuth(event)">
+            <div class="form-group" id="nameGroup" style="display: none;">
+                <label class="form-label">Нікнейм</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="usernameInput" placeholder="Ваш нікнейм">
+                </div>
+            </div>
+
             <div class="form-group">
                 <label class="form-label">Email або нікнейм</label>
                 <div class="input-wrapper">
-                    <i class="fa-regular fa-user"></i>
-                    <input type="text" placeholder="Введіть ваш email або нікнейм" required>
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="text" id="emailInput" placeholder="Введіть email або нікнейм" required>
                 </div>
             </div>
 
@@ -205,23 +178,12 @@
                 <label class="form-label">Пароль</label>
                 <div class="input-wrapper">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" placeholder="Введіть пароль" required>
+                    <input type="password" id="passwordInput" placeholder="Введіть пароль" required>
                 </div>
             </div>
 
-            <button type="submit" class="auth-btn">Увійти <i class="fa-solid fa-arrow-right"></i></button>
+            <button type="submit" class="auth-btn" id="submitBtn">Увійти →</button>
         </form>
-
-        <div style="text-align: center; margin: 1.25rem 0; color: #64748b; font-size: 0.8rem; position: relative;">
-            <span style="background: #0d111a; padding: 0 10px; position: relative; z-index: 1;">або через соцмережі</span>
-            <hr style="border: none; border-top: 1px solid #1f293d; position: absolute; top: 50%; left: 0; width: 100%; margin: 0; z-index: 0;">
-        </div>
-
-        <div class="social-login">
-            <a href="profile.html" class="social-btn"><i class="fa-brands fa-google" style="color: #ea4335;"></i> Google</a>
-            <a href="profile.html" class="social-btn"><i class="fa-brands fa-discord" style="color: #5865F2;"></i> Discord</a>
-            <a href="profile.html" class="social-btn"><i class="fa-brands fa-steam" style="color: #66c0f4;"></i> Steam</a>
-        </div>
 
         <div class="back-home">
             <a href="index.html"><i class="fa-solid fa-house"></i> На головну</a>
@@ -229,12 +191,26 @@
     </div>
 
     <script>
-        function switchTab(tab) {
-            const tabs = document.querySelectorAll('.auth-tab');
-            tabs.forEach(t => t.classList.remove('active'));
+        let isLogin = true;
+
+        function setMode(mode) {
+            isLogin = (mode === 'login');
+            document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
             event.target.classList.add('active');
+            
+            document.getElementById('nameGroup').style.display = isLogin ? 'none' : 'block';
+            document.getElementById('submitBtn').innerText = isLogin ? 'Увійти →' : 'Зареєструватися →';
+        }
+
+        function handleAuth(event) {
+            event.preventDefault();
+            let name = isLogin ? (document.getElementById('emailInput').value.split('@')[0]) : document.getElementById('usernameInput').value;
+            if(!name) name = "Солтис Вадим";
+            
+            // Зберігаємо стан входу в пам'яті браузера
+            localStorage.setItem('topModsUser', name);
+            window.location.href = 'profile.html';
         }
     </script>
-
 </body>
 </html>
